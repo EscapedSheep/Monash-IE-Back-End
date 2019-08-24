@@ -62,7 +62,7 @@ public class TreeController extends BaseController{
 	 */
 	@RequestMapping(value="/viewMyTree", method = RequestMethod.POST)
 	@ResponseBody
-	public RestResult loginTree(@RequestBody Tree tree, HttpServletResponse response) {
+	public RestResult loginTree(Tree tree, HttpServletResponse response) {
 		Tree t = treeService.checkLogin(tree);
 		if (t != null) {
 			Cookie cookie = new Cookie(Const.LOGIN_SESSION_KEY, cookieSign(t.getId().toString()));
