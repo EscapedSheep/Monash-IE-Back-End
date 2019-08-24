@@ -1,0 +1,45 @@
+package com.treepal.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.treepal.domain.Tree;
+import com.treepal.utils.Const;
+
+
+@Controller
+@RequestMapping("/")
+public class IndexController extends BaseController{
+	
+	
+	@RequestMapping(value="/index")
+	public String index(Model model){
+//		IndexCollectorView indexCollectorView = collectorService.getCollectors();
+		Tree tree = super.getTree();
+		if(null != tree){
+			model.addAttribute(Const.LOGIN_SESSION_KEY,tree);
+		}
+		return "index";
+	}
+	
+	@RequestMapping(value="/")
+	public String home(Model model) {
+		Tree tree = super.getTree();
+		if(null != tree){
+			model.addAttribute(Const.LOGIN_SESSION_KEY,tree);
+		}
+		return "index";
+	}
+	
+	@RequestMapping(value="/activity")
+	public String activity() {
+		return "activity";
+	}
+	
+	@RequestMapping(value="/tree")
+	public String tree() {
+		return "tree";
+	}
+}
