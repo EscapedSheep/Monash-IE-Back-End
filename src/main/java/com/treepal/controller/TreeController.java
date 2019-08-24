@@ -80,12 +80,11 @@ public class TreeController extends BaseController{
 			return resultGenerater.getFailResult("Cannot find tree name: " + tree.getName() + " with ID:" + tree.getId());
 		}
 		catch (Exception e) {
-			return resultGenerater.getFailResult("Server error");
+			return resultGenerater.getFailResult(e.getMessage());
 		}
-		return resultGenerater.getFailResult("Cannot find tree name: " + tree.getName() + " with ID:" + tree.getId());
 	}
 	
-
+	
     @ExceptionHandler(ConstraintViolationException.class)
     @ResponseBody
     public RestResult handleConstraintViolationException(ConstraintViolationException cve) {

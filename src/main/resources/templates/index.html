@@ -20,7 +20,7 @@
 						return ;
 					}
 					//var param = "username="+username+"&password="+password;
-					var param = {id: id_tree, name: name_tree};
+					var param = {fakeId: id_tree, name: name_tree};
 					$.post("/tree/viewMyTree",param, function(result) {
 						if (result.code == 200) {
 							window.location.href="/index";
