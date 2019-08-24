@@ -5,6 +5,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.ConstraintViolationException;
 
+import com.treepal.utils.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
@@ -63,14 +64,23 @@ public class TreeController extends BaseController{
 	@RequestMapping(value="/viewMyTree", method = RequestMethod.POST)
 	@ResponseBody
 	public RestResult loginTree(Tree tree, HttpServletResponse response) {
-		Tree t = treeService.checkLogin(tree);
-		if (t != null) {
-			Cookie cookie = new Cookie(Const.LOGIN_SESSION_KEY, cookieSign(t.getId().toString()));
-			cookie.setMaxAge(Const.COOKIE_TIMEOUT);
-			cookie.setPath("/");
-			response.addCookie(cookie);
-			getSession().setAttribute(Const.LOGIN_SESSION_KEY, t);
-			return resultGenerater.getSuccessResult("/");
+		try {
+			if (!StringUtil.isInteger(tree.getFakeId()) )
+				return resultGenerater.getFailResult("Cannot find tree name: " + tree.getName() + " with ID:" + tree.getId());
+			tree.setId(Long.parseLong(tree.getFakeId()));
+			Tree t = treeService.checkLogin(tree);
+			if (t != null) {
+				Cookie cookie = new Cookie(Const.LOGIN_SESSION_KEY, cookieSign(t.getId().toString()));
+				cookie.setMaxAge(Const.COOKIE_TIMEOUT);
+				cookie.setPath("/");
+				response.addCookie(cookie);
+				getSession().setAttribute(Const.LOGIN_SESSION_KEY, t);
+				return resultGenerater.getSuccessResult("/");
+			}
+			return resultGenerater.getFailResult("Cannot find tree name: " + tree.getName() + " with ID:" + tree.getId());
+		}
+		catch (Exception e) {
+			return resultGenerater.getFailResult("Server error");
 		}
 		return resultGenerater.getFailResult("Cannot find tree name: " + tree.getName() + " with ID:" + tree.getId());
 	}

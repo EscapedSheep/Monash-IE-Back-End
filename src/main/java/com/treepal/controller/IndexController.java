@@ -42,4 +42,15 @@ public class IndexController extends BaseController{
 	public String tree() {
 		return "tree";
 	}
+
+	@RequestMapping(value="/logout",method=RequestMethod.GET)
+	public String logout(HttpServletResponse response,Model model) {
+		getSession().removeAttribute(Const.LOGIN_SESSION_KEY);
+		Cookie cookie = new Cookie(Const.LOGIN_SESSION_KEY, "");
+		cookie.setMaxAge(0);
+		cookie.setPath("/");
+		model.addAttribute(Const.LOGIN_SESSION_KEY,null);
+		response.addCookie(cookie);
+		return "index";
+	}
 }
