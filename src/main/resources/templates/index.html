@@ -11,16 +11,16 @@
 		<script type="text/javascript">
 			$(function(){
 				$("#loginBtn").click(function(){
-					var name_tree = $("#name").val();
+					var name_tree = $("#name").val();//取值
 					var id_tree = $("#id").val();
 					if(name_tree === ""){
 						alert("Tree pal name cannot be empty~");
-						$("#username").focus();
+						$("#username").focus();//获取焦点
 						return ;
 					}
 					if(id_tree === ""){
 						alert("Tree pal id cannot be empty~");
-						$("#password").focus();
+						$("#password").focus();//获取焦点
 						return ;
 					}
 					//var param = "username="+username+"&password="+password;
@@ -30,8 +30,7 @@
 							window.location.href="/index";
 						}
 						else {
-							$("errorMsg").innerHTML = result.msg;
-							$("errorMsg").style.display="block"
+							alert("bad");
 						}
 					})
 				});
@@ -46,14 +45,14 @@
 					var url = "tree/getNewTree?name=" + name;
 					$.get(url, function (result) {
 						if(result.code == 200) {
-							window.location.href="/index"
+							window.location.href="/index";
 						}
 						else {
 							$("errorMsg").innerHTML = result.msg;
-							$("errorMsg").style.display="block"
+							$("errorMsg").style.display="block";
 						}
 					})
-				})
+				});
 			});
 		</script>
 	</head>
@@ -84,9 +83,9 @@
 			</div>
 		</div>
 		<div class="right">
-			<h3 th:text="${myTree == null ? 'not login': 'Hello: ' + myTree.name}"></h3>
+			<h3 th:text="${myTree == null ? 'not login': 'Hello: 'myTree.name}"></h3>
 			<div class="table">
-				<form th:if="${myTree == null}">
+				<form th:if="{$myTree == null">
 					<table>
 						<tr>
 							<td class="t-left">
