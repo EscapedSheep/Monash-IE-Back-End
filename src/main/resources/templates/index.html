@@ -2,22 +2,25 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="renderer" content="webkit">
 		<title>login</title>
 		<link href="index/init.css" rel="stylesheet" type="text/css" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 		<script type="text/javascript">
 			$(function(){
 				$("#loginBtn").click(function(){
-					var name_tree = $("#name").val();//取值
+					var name_tree = $("#name").val();
 					var id_tree = $("#id").val();
 					if(name_tree === ""){
-						alert("用户名必填!");
-						$("#username").focus();//获取焦点
+						alert("Tree pal name cannot be empty~");
+						$("#username").focus();
 						return ;
 					}
 					if(id_tree === ""){
-						alert("密码必填!");
-						$("#password").focus();//获取焦点
+						alert("Tree pal id cannot be empty~");
+						$("#password").focus();
 						return ;
 					}
 					//var param = "username="+username+"&password="+password;
@@ -27,19 +30,91 @@
 							window.location.href="/index";
 						}
 						else {
-							alert("bad");
+							$("errorMsg").innerHTML = result.msg;
+							$("errorMsg").style.display="block"
 						}
 					})
 				});
+
+				$("#registBtn").click(function () {
+					var name = $("#regname").val();
+					if(name === ""){
+						alert("Please provide a tree pal name");
+						$("#regname").focus();
+						return ;
+					}
+					var url = "tree/getNewTree?name=" + name;
+					$.get(url, function (result) {
+						if(result.code == 200) {
+							window.location.href="/index"
+						}
+						else {
+							$("errorMsg").innerHTML = result.msg;
+							$("errorMsg").style.display="block"
+						}
+					})
+				})
 			});
 		</script>
 	</head>
 	<body>
-		<form>
-			name:<input type="text" id="name" name="name"><br/>
-			id:<input type="text" id="id" name="id"><br/>
-			<input type="button" value="login" id="loginBtn">
-		</form>
-	<h3 th:text="${myTree == null ? 'not login': myTree.name}"></h3>
+		<div class="left">
+			<p class="first">Wanna have a tree pal?</p>
+			<p class="third">Regist one!</p>
+		</div>
+		<div class="mid">
+			<div class="table">
+				<form th:if="${myTree == null}">
+					<table>
+						<tr>
+							<td class="t-left">
+								<label for="regname">Tree pal name</label>
+							</td>
+							<td class="t-right">
+								<input type="text" name="regname" id="regname" placeholder="Give a name to your tree pal"/>
+							</td>
+						</tr>
+						<tr align="center">
+							<td colspan="2">
+								<input type="button" value="GetTreePal" id="registBtn">
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<div class="right">
+			<h3 th:text="${myTree == null ? 'not login': 'Hello: ' + myTree.name}"></h3>
+			<div class="table">
+				<form th:if="${myTree == null}">
+					<table>
+						<tr>
+							<td class="t-left">
+								<label for="id">Tree pal id</label>
+							</td>
+							<td class="t-right">
+								<input type="text" name="id" id="id" placeholder="Your tree pal id">
+							</td>
+						</tr>
+						<tr>
+							<td class="t-left">
+								<label for="name">Tree pal name</label>
+							</td>
+							<td class="t-right">
+								<input type="text" name="name" id="name" placeholder="Your tree pal name">
+							</td>
+						</tr>
+						<tr align="center">
+							<td colspan="2">
+								<input type="button" value="Login" id="loginBtn">
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<div>
+			<span style="display: none" id="errorMsg"></span>
+		</div>
 	</body>
 </html>

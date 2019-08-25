@@ -7,3 +7,94 @@ body
 		background-color:#CCCCCC;
 		background-repeat: no-repeat;
 	}
+
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body > div {
+	/*最外层容器指定大小,边框，水平居中, */
+	width: 850px;
+	height: 400px;
+	/*background-color: white;*/
+	border: gray solid 8px;
+	margin: 60px auto;
+}
+
+/* -------------------------------------------------------- */
+/*左浮动*/
+.left {
+	float: left;
+	width: 25%;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.first {
+	font-size: 20px;
+	color: orange;
+
+}
+
+.left p:last-child {
+	font-size: 20px;
+	color: gray;
+}
+
+/* -------------------------------------------------------- */
+
+.mid {
+	font-size: 15px;
+	float: left;
+	width: 47%;
+}
+
+.table {
+	margin-top: 25px;
+	float: left;
+}
+
+.t-left {
+	/*文字靠左边*/
+	text-align: left;
+
+}
+
+.t-right {
+}
+
+/* 表单中的文本框，日期框，密码框使用属性选择器，宽256，高32，行高32，内边距上下6，左右12，
+圆角4，边框：1 实线 颜色#a6a6a6，右浮动*/
+input[type="text"], input[type="date"], input[type="password"], input[type="email"],
+input[type="tel"], input[type="radio"] {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 4px; /*圆角*/
+	border: gray solid 1px;
+	margin-left: 30px; /*指定左边距，调节左边距的距离*/
+}
+
+input[type="radio"] {
+}
+
+/* -------------------------------------------------------- */
+.right {
+	float: right;
+	width: 25%;
+}
+
+.right p {
+	font-size: 15px;
+	padding: 10px 10px 0px 0px;
+	float: right;
+	margin-left: 30px;
+}
+
+/*验证码*/
+.check {
+	margin-left: 30px;
+}
