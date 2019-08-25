@@ -15,8 +15,8 @@ public class MapServiceImpl implements MapService {
 	private TreeGeoRepository treeGeoRepository;
 	
 	@Override
-	public List<TreeGeo> findNearbyTree(double[] coordinates, int limit) {
-		return treeGeoRepository.findNearbyTree(coordinates, limit);
+	public List<TreeGeo> findNearbyTree(double[] coordinates, double maxDistance) {
+		return treeGeoRepository.findNearbyTree(coordinates, maxDistance);
 	}
 
 }

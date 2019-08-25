@@ -19,10 +19,10 @@ public class TreeGeoRepositoryImpl implements TreeGeoRepository {
 	private MongoTemplate mongoTemplate;
 
 	@Override
-	public List<TreeGeo> findNearbyTree(double[] coordinates, int limit) {
+	public List<TreeGeo> findNearbyTree(double[] coordinates, double maxDistance) {
 		Point point = new Point(coordinates[0], coordinates[1]);
 		List<TreeGeo> trees = 
-				mongoTemplate.find(new Query(Criteria.where("geometry.coordinates").near(point)).limit(limit), TreeGeo.class);
+				mongoTemplate.find(new Query(Criteria.where("geometry.coordinates").near(point).maxDistance(maxDistance)), TreeGeo.class);
 		return trees;
 	}
 

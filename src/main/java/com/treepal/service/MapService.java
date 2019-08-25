@@ -6,6 +6,6 @@ import com.treepal.domain.TreeGeo;
 
 public interface MapService {
 	
-	List<TreeGeo> findNearbyTree(double[] coordinates, int limit);
+	List<TreeGeo> findNearbyTree(double[] coordinates, double maxDistance);
 
 }
