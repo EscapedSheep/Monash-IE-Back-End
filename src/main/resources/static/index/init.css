@@ -1,0 +1,9 @@
+body
+	{
+		background-image:url('../img/bcg2.png');
+		background-size:cover;
+		background-position: center center;
+		background-attachment: fixed;
+		background-color:#CCCCCC;
+		background-repeat: no-repeat;
+	}
