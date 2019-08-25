@@ -2,9 +2,6 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="renderer" content="webkit">
 		<title>login</title>
 		<link href="index/init.css" rel="stylesheet" type="text/css" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
@@ -15,12 +12,12 @@
 					var id_tree = $("#id").val();
 					if(name_tree === ""){
 						alert("Tree pal name cannot be empty~");
-						$("#username").focus();//获取焦点
+						$("#name").focus();//获取焦点
 						return ;
 					}
 					if(id_tree === ""){
 						alert("Tree pal id cannot be empty~");
-						$("#password").focus();//获取焦点
+						$("#id").focus();//获取焦点
 						return ;
 					}
 					//var param = "username="+username+"&password="+password;
@@ -31,12 +28,12 @@
 						}
 						else {
 							$("errorMsg").innerHTML = result.msg;
-							$("errorMsg").style.display="block";
+							$("errorMsg").style.display="block"
 						}
 					})
 				});
 
-				$("#registBtn").click(function () {
+				$("#registBtn").click(function() {
 					var name = $("#regname").val();
 					if(name === ""){
 						alert("Please provide a tree pal name");
@@ -46,11 +43,11 @@
 					var url = "tree/getNewTree?name=" + name;
 					$.get(url, function (result) {
 						if(result.code == 200) {
-							window.location.href="/index";
+							window.location.href="/index"
 						}
 						else {
 							$("errorMsg").innerHTML = result.msg;
-							$("errorMsg").style.display="block";
+							$("errorMsg").style.display="block"
 						}
 					})
 				});
@@ -61,6 +58,7 @@
 		<div class="left">
 			<p class="first">Wanna have a tree pal?</p>
 			<p class="third">Regist one!</p>
+			<a th:unless="${myTree == null}" href="/logout">logout</a>
 		</div>
 		<div class="mid">
 			<div class="table">
@@ -76,7 +74,7 @@
 						</tr>
 						<tr align="center">
 							<td colspan="2">
-								<input type="button" value="GetTreePal" id="registBtn">
+								<input type="button" value="GetTreePal" id="registBtn"/>
 							</td>
 						</tr>
 					</table>
@@ -93,7 +91,7 @@
 								<label for="id">Tree pal id</label>
 							</td>
 							<td class="t-right">
-								<input type="text" name="id" id="id" placeholder="Your tree pal id">
+								<input type="text" name="id" id="id" placeholder="Your tree pal id"/>
 							</td>
 						</tr>
 						<tr>
