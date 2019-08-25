@@ -1,12 +1,10 @@
 package com.treepal.domain;
 
-import org.springframework.data.mongodb.core.index.GeoSpatialIndexed;
 
 public class Geometry {
 	
 	private String type;
 	
-	@GeoSpatialIndexed
 	private double[] coordinates;
 	
 	public Geometry() {
