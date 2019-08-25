@@ -30,7 +30,8 @@
 							window.location.href="/index";
 						}
 						else {
-							alert("bad");
+							$("errorMsg").innerHTML = result.msg;
+							$("errorMsg").style.display="block";
 						}
 					})
 				});
@@ -85,7 +86,7 @@
 		<div class="right">
 			<h3 th:text="${myTree == null ? 'not login': 'Hello: 'myTree.name}"></h3>
 			<div class="table">
-				<form th:if="{$myTree == null">
+				<form th:if="${myTree == null}">
 					<table>
 						<tr>
 							<td class="t-left">
