@@ -9,7 +9,6 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
 
-
 import com.treepal.domain.TreeGeo;
 
 @Component
@@ -22,7 +21,7 @@ public class TreeGeoRepositoryImpl implements TreeGeoRepository {
 	public List<TreeGeo> findNearbyTree(double[] coordinates, double maxDistance) {
 		Point point = new Point(coordinates[0], coordinates[1]);
 		List<TreeGeo> trees = 
-				mongoTemplate.find(new Query(Criteria.where("geometry.coordinates").near(point).maxDistance(maxDistance)), TreeGeo.class);
+				mongoTemplate.find(new Query(Criteria.where("geometry.coordinates").nearSphere(point).maxDistance(maxDistance)), TreeGeo.class);
 		return trees;
 	}
 
