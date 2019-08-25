@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 
 
@@ -29,6 +30,9 @@ public class Tree implements Serializable {
 	@Column
 	private int todayGrowth;
 
+	@Transient
+	private String fakeId;
+
 	
 	public Tree() {
 		this.age = 0;
@@ -39,6 +43,7 @@ public class Tree implements Serializable {
 		this.name = name;
 		this.age = 0;
 		this.todayGrowth = 0;
+		this.fakeId = "";
 	}
 	
 	public Tree(Long id, String name) {
@@ -46,7 +51,18 @@ public class Tree implements Serializable {
 		this.name = name;
 		this.age = 0;
 		this.todayGrowth = 0;
+		this.fakeId = "";
 	}
+
+	public Tree(String fakeId, String name) {
+		this.fakeId = fakeId;
+		this.name = name;
+		this.age = 0;
+		this.todayGrowth = 0;
+
+	}
+
+
 	public Long getId() {
 		return id;
 	}
@@ -78,6 +94,12 @@ public class Tree implements Serializable {
 	public void setTodayGrowth(int todayGrowth) {
 		this.todayGrowth = todayGrowth;
 	}
-	
 
+	public String getFakeId() {
+		return fakeId;
+	}
+
+	public void setFakeId(String fakeId) {
+		this.fakeId = fakeId;
+	}
 }
