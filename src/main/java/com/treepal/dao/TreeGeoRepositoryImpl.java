@@ -19,9 +19,7 @@ public class TreeGeoRepositoryImpl implements TreeGeoRepository {
 
 	@Override
 	public List<GeoTree> findBySuburb(String suburb) {
-		Query query = Query.query(Criteria.where("properties.suburb").is(suburb));
+		Query query = Query.query(Criteria.where("properties.suburb").regex(suburb,"i"));
 		return mongoTemplate.find(query, GeoTree.class);
 	}
-
-
 }
