@@ -4,11 +4,10 @@ package com.treepal.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.geo.GeoResults;
 import org.springframework.stereotype.Service;
 
 import com.treepal.dao.TreeGeoRepository;
-import com.treepal.domain.TreeGeo;
+import com.treepal.domain.GeoTree;
 
 @Service("MapService")
 public class MapServiceImpl implements MapService {
@@ -17,7 +16,7 @@ public class MapServiceImpl implements MapService {
 	private TreeGeoRepository treeGeoRepository;
 
 	@Override
-	public List<TreeGeo> findBySuburb(String suburb) {
+	public List<GeoTree> findBySuburb(String suburb) {
 		return treeGeoRepository.findBySuburb(suburb);
 	}
 	

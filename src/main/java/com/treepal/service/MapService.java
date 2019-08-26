@@ -2,12 +2,11 @@ package com.treepal.service;
 
 import java.util.List;
 
-import org.springframework.data.geo.GeoResults;
+import com.treepal.domain.GeoTree;
 
-import com.treepal.domain.TreeGeo;
 
 public interface MapService {
 	
-	List<TreeGeo> findBySuburb(String suburb);
+	List<GeoTree> findBySuburb(String suburb);
 
 }

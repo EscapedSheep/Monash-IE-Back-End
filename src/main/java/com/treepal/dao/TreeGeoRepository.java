@@ -2,11 +2,9 @@ package com.treepal.dao;
 
 import java.util.List;
 
-import org.springframework.data.geo.GeoResults;
-
-import com.treepal.domain.TreeGeo;
+import com.treepal.domain.GeoTree;
 
 public interface TreeGeoRepository {
 	
-	List<TreeGeo> findBySuburb(String suburb);
+	List<GeoTree> findBySuburb(String suburb);
 }

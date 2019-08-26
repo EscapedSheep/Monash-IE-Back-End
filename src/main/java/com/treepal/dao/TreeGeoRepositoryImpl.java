@@ -3,17 +3,13 @@ package com.treepal.dao;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.geo.Box;
-import org.springframework.data.geo.GeoResults;
-import org.springframework.data.geo.Metrics;
-import org.springframework.data.geo.Point;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.NearQuery;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
 
-import com.treepal.domain.TreeGeo;
+import com.treepal.domain.GeoTree;
+
 
 @Component
 public class TreeGeoRepositoryImpl implements TreeGeoRepository {
@@ -22,8 +18,9 @@ public class TreeGeoRepositoryImpl implements TreeGeoRepository {
 	private MongoTemplate mongoTemplate;
 
 	@Override
-	public List<TreeGeo> findBySuburb(String suburb) {
-		return mongoTemplate.find(new Query(Criteria.where("properties.suburb").is(suburb)), TreeGeo.class);
+	public List<GeoTree> findBySuburb(String suburb) {
+		Query query = Query.query(Criteria.where("properties.suburb").is(suburb));
+		return mongoTemplate.find(query, GeoTree.class);
 	}
 
 

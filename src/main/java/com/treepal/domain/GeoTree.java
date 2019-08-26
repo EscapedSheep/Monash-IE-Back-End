@@ -2,14 +2,9 @@ package com.treepal.domain;
 
 import java.io.Serializable;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection="treeGeo")
-public class TreeGeo implements Serializable{
+public class GeoTree implements Serializable{
 	private static final long serialVersionUID = -3258839839160856613L;
 	
-	@Id
 	private String _id;
 	
 	private String type;
@@ -18,7 +13,7 @@ public class TreeGeo implements Serializable{
 	
 	private Properties properties;
 	
-	public TreeGeo() {
+	public GeoTree() {
 		
 	}
 
@@ -53,5 +48,6 @@ public class TreeGeo implements Serializable{
 	public void setProperties(Properties properties) {
 		this.properties = properties;
 	}
+	
 
 }

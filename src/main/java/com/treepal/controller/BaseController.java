@@ -3,7 +3,6 @@ package com.treepal.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -11,7 +10,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import com.treepal.domain.Tree;
 import com.treepal.utils.Const;
 import com.treepal.utils.Des3EncryptionUtil;
-import com.treepal.utils.ResultGenerater;
 
 
 @Controller

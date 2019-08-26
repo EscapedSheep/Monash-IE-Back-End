@@ -5,41 +5,41 @@ public class Properties {
 	
 	private int com_id;
 	
-	private String common_name;
+	private Object common_name;
 	
-	private String scientific_name;
+	private Object scientific_name;
 	
-	private String genus;
+	private Object genus;
 	
-	private String family;
+	private Object family;
 	
-	private int diameter_breast_height;
+	private Object diameter_breast_height;
 	
-	private int year_planted;
+	private Object year_planted;
 	
-	private String date_planted;
+	private Object date_planted;
 	
-	private String age_description;
+	private Object age_description;
 	
-	private String useful_life_expectency;
+	private Object useful_life_expectency;
 	
-	private int useful_life_expectency_value;
+	private Object useful_life_expectency_value;
 	
-	private String precinct;
+	private Object precinct;
 	
-	private String located_in;
+	private Object located_in;
 	
-	private String uploaddate;
+	private Object uploaddate;
 	
-	private String coordinatelocation;
+	private Object coordinatelocation;
 	
-	private double latitude;
+	private Object latitude;
 	
-	private double longitude;
+	private Object longitude;
 	
-	private double easting;
+	private Object easting;
 	
-	private double northing;
+	private Object northing;
 	
 	private String fulladdress;
 	
@@ -57,152 +57,156 @@ public class Properties {
 		this.cartodb_id = cartodb_id;
 	}
 
+	public Object getCommon_name() {
+		return common_name;
+	}
+
+	public void setCommon_name(Object common_name) {
+		this.common_name = common_name;
+	}
+
+	public Object getScientific_name() {
+		return scientific_name;
+	}
+
+	public void setScientific_name(Object scientific_name) {
+		this.scientific_name = scientific_name;
+	}
+
+	public Object getGenus() {
+		return genus;
+	}
+
+	public void setGenus(Object genus) {
+		this.genus = genus;
+	}
+
+	public Object getFamily() {
+		return family;
+	}
+
+	public void setFamily(Object family) {
+		this.family = family;
+	}
+
+	public Object getDiameter_breast_height() {
+		return diameter_breast_height;
+	}
+
+	public void setDiameter_breast_height(Object diameter_breast_height) {
+		this.diameter_breast_height = diameter_breast_height;
+	}
+
+	public Object getYear_planted() {
+		return year_planted;
+	}
+
+	public void setYear_planted(Object year_planted) {
+		this.year_planted = year_planted;
+	}
+
+	public Object getDate_planted() {
+		return date_planted;
+	}
+
+	public void setDate_planted(Object date_planted) {
+		this.date_planted = date_planted;
+	}
+
+	public Object getAge_description() {
+		return age_description;
+	}
+
+	public void setAge_description(Object age_description) {
+		this.age_description = age_description;
+	}
+
+	public Object getUseful_life_expectency() {
+		return useful_life_expectency;
+	}
+
+	public void setUseful_life_expectency(Object useful_life_expectency) {
+		this.useful_life_expectency = useful_life_expectency;
+	}
+
+	public Object getUseful_life_expectency_value() {
+		return useful_life_expectency_value;
+	}
+
+	public void setUseful_life_expectency_value(Object useful_life_expectency_value) {
+		this.useful_life_expectency_value = useful_life_expectency_value;
+	}
+
+	public Object getPrecinct() {
+		return precinct;
+	}
+
+	public void setPrecinct(Object precinct) {
+		this.precinct = precinct;
+	}
+
+	public Object getLocated_in() {
+		return located_in;
+	}
+
+	public void setLocated_in(Object located_in) {
+		this.located_in = located_in;
+	}
+
+	public Object getUploaddate() {
+		return uploaddate;
+	}
+
+	public void setUploaddate(Object uploaddate) {
+		this.uploaddate = uploaddate;
+	}
+
+	public Object getCoordinatelocation() {
+		return coordinatelocation;
+	}
+
+	public void setCoordinatelocation(Object coordinatelocation) {
+		this.coordinatelocation = coordinatelocation;
+	}
+
+	public Object getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(Object latitude) {
+		this.latitude = latitude;
+	}
+
+	public Object getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(Object longitude) {
+		this.longitude = longitude;
+	}
+
+	public Object getEasting() {
+		return easting;
+	}
+
+	public void setEasting(Object easting) {
+		this.easting = easting;
+	}
+
+	public Object getNorthing() {
+		return northing;
+	}
+
+	public void setNorthing(Object northing) {
+		this.northing = northing;
+	}
+
 	public int getCom_id() {
 		return com_id;
 	}
 
 	public void setCom_id(int com_id) {
 		this.com_id = com_id;
-	}
-
-	public String getCommon_name() {
-		return common_name;
-	}
-
-	public void setCommon_name(String common_name) {
-		this.common_name = common_name;
-	}
-
-	public String getScientific_name() {
-		return scientific_name;
-	}
-
-	public void setScientific_name(String scientific_name) {
-		this.scientific_name = scientific_name;
-	}
-
-	public String getGenus() {
-		return genus;
-	}
-
-	public void setGenus(String genus) {
-		this.genus = genus;
-	}
-
-	public String getFamily() {
-		return family;
-	}
-
-	public void setFamily(String family) {
-		this.family = family;
-	}
-
-	public int getDiameter_breast_height() {
-		return diameter_breast_height;
-	}
-
-	public void setDiameter_breast_height(int diameter_breast_height) {
-		this.diameter_breast_height = diameter_breast_height;
-	}
-
-	public int getYear_planted() {
-		return year_planted;
-	}
-
-	public void setYear_planted(int year_planted) {
-		this.year_planted = year_planted;
-	}
-
-	public String getDate_planted() {
-		return date_planted;
-	}
-
-	public void setDate_planted(String date_planted) {
-		this.date_planted = date_planted;
-	}
-
-	public String getAge_description() {
-		return age_description;
-	}
-
-	public void setAge_description(String age_description) {
-		this.age_description = age_description;
-	}
-
-	public String getUseful_life_expectency() {
-		return useful_life_expectency;
-	}
-
-	public void setUseful_life_expectency(String useful_life_expectency) {
-		this.useful_life_expectency = useful_life_expectency;
-	}
-
-	public int getUseful_life_expectency_value() {
-		return useful_life_expectency_value;
-	}
-
-	public void setUseful_life_expectency_value(int useful_life_expectency_value) {
-		this.useful_life_expectency_value = useful_life_expectency_value;
-	}
-
-	public String getPrecinct() {
-		return precinct;
-	}
-
-	public void setPrecinct(String precinct) {
-		this.precinct = precinct;
-	}
-
-	public String getLocated_in() {
-		return located_in;
-	}
-
-	public void setLocated_in(String located_in) {
-		this.located_in = located_in;
-	}
-
-	public String getUploaddate() {
-		return uploaddate;
-	}
-
-	public void setUploaddate(String uploaddate) {
-		this.uploaddate = uploaddate;
-	}
-
-	public String getCoordinatelocation() {
-		return coordinatelocation;
-	}
-
-	public void setCoordinatelocation(String coordinatelocation) {
-		this.coordinatelocation = coordinatelocation;
-	}
-
-	public double getLatitude() {
-		return latitude;
-	}
-
-	public void setLatitude(double latitude) {
-		this.latitude = latitude;
-	}
-
-	public double getLongitude() {
-		return longitude;
-	}
-
-	public void setLongitude(double longitude) {
-		this.longitude = longitude;
-	}
-
-	public double getEasting() {
-		return easting;
-	}
-
-	public void setEasting(double easting) {
-		this.easting = easting;
-	}
-
-	public double getNorthing() {
-		return northing;
 	}
 
 	public void setNorthing(double northing) {
