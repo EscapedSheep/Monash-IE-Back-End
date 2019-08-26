@@ -22,37 +22,9 @@ public class TreeGeoRepositoryImpl implements TreeGeoRepository {
 	private MongoTemplate mongoTemplate;
 
 	@Override
-	public List<TreeGeo> findBoxTree(double[] coordinates, double[] coordinates2,int limit) {
-		Point point = new Point(coordinates[0], coordinates[1]);
-		Point point2 = new Point(coordinates2[0], coordinates[1]);
-		Query query = new Query(Criteria.where("geometry.coordinates").within(new Box(point, point2)));
-		return mongoTemplate.find(query,TreeGeo.class);
+	public List<TreeGeo> findBySuburb(String suburb) {
+		return mongoTemplate.find(new Query(Criteria.where("properties.suburb").is(suburb)), TreeGeo.class);
 	}
 
-	@Override
-	public GeoResults<TreeGeo> findNearbyTree(double[] coordinates, int limit) {
-		/*Point point = new Point(coordinates[0],coordinates[1]);
-		Query query = new Query(Criteria.where("geometry.coordinates").near(point).maxDistance(20 / 111)).limit(limit);
-        return mongoTemplate.find(query, TreeGeo.class);
-        
-        DBObject near = new BasicDBObject( "loc",JSON.parse("{$near : [ " + lon + "," + lat + " ] }"));  
-        DBObject query = new BasicDBObject();  
-        //query.put("cityId", 110000);  
-        //near.put("cityId", 110000);  
-        DBCursor cur = mongoTemplate.g.find(near, query);  
-        int n = 0;  
-        while(cur.hasNext()){  
-            DBObject c = cur.next();  
-            BasicDBList loc = (BasicDBList)c.get("loc");  
-         }  
-         */
-		NearQuery query = NearQuery.near(new Point(coordinates[0], coordinates[1]),Metrics.KILOMETERS).num(limit);
-		return mongoTemplate.geoNear(query, TreeGeo.class);
-		
-		
-		
-		
-	}
-		
 
 }

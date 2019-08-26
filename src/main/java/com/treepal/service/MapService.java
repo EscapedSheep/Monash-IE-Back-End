@@ -8,6 +8,6 @@ import com.treepal.domain.TreeGeo;
 
 public interface MapService {
 	
-	GeoResults<TreeGeo> findNearbyTree(double[] coordinates, int limit);
+	List<TreeGeo> findBySuburb(String suburb);
 
 }

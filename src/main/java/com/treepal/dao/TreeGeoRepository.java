@@ -8,7 +8,5 @@ import com.treepal.domain.TreeGeo;
 
 public interface TreeGeoRepository {
 	
-	List<TreeGeo> findBoxTree(double[] coordinates, double[] coordinates2, int limit);
-
-	GeoResults<TreeGeo> findNearbyTree(double[] coordinates, int limit);
+	List<TreeGeo> findBySuburb(String suburb);
 }

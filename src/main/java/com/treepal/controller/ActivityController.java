@@ -26,12 +26,9 @@ public class ActivityController extends BaseController{
 	
 	@RequestMapping(value="/findNearbyTree", method = RequestMethod.GET)
 	@ResponseBody
-	public RestResult findNearbyTree(double log, double lat, int lim) {
+	public RestResult findNearbyTree(String suburb) {
 		try {
-			double[] coordinates = new double[2];
-			coordinates[0] = log;
-			coordinates[1] = lat;
-			return resultGenerater.getSuccessResult(mapService.findNearbyTree(coordinates, lim));
+			return resultGenerater.getSuccessResult(mapService.findBySuburb(suburb));
 		}
 		catch(Exception e) {
 			return resultGenerater.getFailResult(e.getMessage());

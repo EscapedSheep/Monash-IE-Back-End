@@ -41,6 +41,10 @@ public class Properties {
 	
 	private double northing;
 	
+	private String fulladdress;
+	
+	private String suburb;
+	
 	public Properties() {
 		
 	}
@@ -203,6 +207,22 @@ public class Properties {
 
 	public void setNorthing(double northing) {
 		this.northing = northing;
+	}
+
+	public String getFulladdress() {
+		return fulladdress;
+	}
+
+	public void setFulladdress(String fulladdress) {
+		this.fulladdress = fulladdress;
+	}
+
+	public String getSuburb() {
+		return suburb;
+	}
+
+	public void setSuburb(String suburb) {
+		this.suburb = suburb;
 	}
 
 	

@@ -1,6 +1,8 @@
 package com.treepal.service;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.geo.GeoResults;
 import org.springframework.stereotype.Service;
@@ -13,10 +15,11 @@ public class MapServiceImpl implements MapService {
 
 	@Autowired
 	private TreeGeoRepository treeGeoRepository;
-	
+
 	@Override
-	public GeoResults<TreeGeo> findNearbyTree(double[] coordinates, int limit) {
-		return treeGeoRepository.findNearbyTree(coordinates, limit);
+	public List<TreeGeo> findBySuburb(String suburb) {
+		return treeGeoRepository.findBySuburb(suburb);
 	}
+	
 
 }

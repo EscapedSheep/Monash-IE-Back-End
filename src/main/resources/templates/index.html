@@ -27,8 +27,8 @@
 							window.location.href="/index";
 						}
 						else {
-							$("errorMsg").innerHTML = result.msg;
-							$("errorMsg").style.display="block"
+							$("#errorMsg").innerHTML = result.msg;
+							$("#errorMsg").style.display="block";
 						}
 					})
 				});
@@ -43,27 +43,56 @@
 					var url = "tree/getNewTree?name=" + name;
 					$.get(url, function (result) {
 						if(result.code == 200) {
-							window.location.href="/index"
+							window.location.href="/index";
 						}
 						else {
-							$("errorMsg").innerHTML = result.msg;
-							$("errorMsg").style.display="block"
+							$("#errorMsg").innerHTML = result.msg;
+							$("#errorMsg").style.display="block";
 						}
 					})
+				});
+
+				$("#yesBtn").click(function() {
+					$("#firstD").hide();
+					$("#yesD").show();
+				});
+
+				$("#noBtn").click(function () {
+					$("#firstD").hide();
+					$("#noD").show();
 				});
 			});
 		</script>
 	</head>
 	<body>
-		<div class="left">
-			<p class="first">Wanna have a tree pal?</p>
-			<p class="third">Regist one!</p>
-			<a th:unless="${myTree == null}" href="/logout">logout</a>
-		</div>
-		<div class="mid">
+		<div class="funA" th:if="${myTree == null}" id="firstD" style="display: block">
 			<div class="table">
-				<form th:if="${myTree == null}">
+				<form>
 					<table>
+						<tr>
+							<td align="center">
+								<h3> Do you have a tree pal?</h3>
+							</td>
+							<td align="center">
+								<input type="button" value="I have a tree pal" id="yesBtn"/>
+							</td>
+							<td align="center">
+								<input type="button" value="I don't have a tree pal" id="noBtn">
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<div class="funA" th:if="${myTree == null}" id="noD" style="display: none">
+			<div class="table">
+				<form>
+					<table>
+						<tr>
+							<td align="center">
+								<h3>Let's make friends!</h3>
+							</td>
+						</tr>
 						<tr>
 							<td class="t-left">
 								<label for="regname">Tree pal name</label>
@@ -81,10 +110,9 @@
 				</form>
 			</div>
 		</div>
-		<div class="right">
-			<h3 th:text="${myTree == null ? 'not login': 'Hello: ' + myTree.name + ', This is your id:' + myTree.id}"></h3>
+		<div class="funA" th:if="${myTree == null}" id="yesD" style="display: none">
 			<div class="table">
-				<form th:if="${myTree == null}">
+				<form>
 					<table>
 						<tr>
 							<td class="t-left">
@@ -110,6 +138,9 @@
 					</table>
 				</form>
 			</div>
+		</div>
+		<div class="hello">
+			<h3 th:text="${myTree == null ? 'not login': 'Hello: ' + myTree.name + ', This is your id:' + myTree.id}"></h3>
 		</div>
 		<div>
 			<span style="display: none" id="errorMsg"></span>
