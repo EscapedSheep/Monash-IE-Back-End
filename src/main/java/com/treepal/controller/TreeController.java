@@ -45,12 +45,14 @@ public class TreeController extends BaseController{
 		 * BindingResult bindingResult
 		 *  method = RequestMethod.POST
 		 *  */
-		if (tree.getName() == "") {
+		if (tree.getName().trim() == "") {
 			return resultGenerater.getFailResult("Tree name should be provided");
 		}
+		/*
 		if (treeService.checkExist(tree.getName())) {
 			return resultGenerater.getFailResult("Tree name existed!");
 		}
+		*/
 		Tree t = treeService.saveTree(tree);
 		getSession().setAttribute(Const.LOGIN_SESSION_KEY, t);
 		model.addAttribute(Const.LOGIN_SESSION_KEY, t);

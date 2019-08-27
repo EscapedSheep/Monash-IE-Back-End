@@ -21,7 +21,7 @@ public class Tree implements Serializable {
 	private Long id;
 	
 	@NotNull(message = "Name cannot be empty")
-	@Column(nullable = false, unique = true)
+	@Column(nullable = false)
 	private String name;
 	
 	@Column
