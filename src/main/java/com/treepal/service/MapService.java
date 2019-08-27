@@ -9,4 +9,5 @@ public interface MapService {
 	
 	List<GeoTree> findBySuburb(String suburb);
 
+	List<GeoTree> findByCoordinates(double lon, double lat, int limit);
 }

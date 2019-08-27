@@ -37,4 +37,15 @@ public class ActivityController extends BaseController{
 			return resultGenerater.getFailResult(e.getMessage());
 		}
 	}
+	
+	@RequestMapping(value="findByLocation", method = RequestMethod.GET)
+	@ResponseBody
+	public RestResult findByLocation(double lon, double lat, int lim) {
+		try {
+			return resultGenerater.getSuccessResult(mapService.findByCoordinates(lon, lat, lim));
+		}
+		catch(Exception e) {
+			return resultGenerater.getFailResult(e.getMessage());
+		}
+	}
 }

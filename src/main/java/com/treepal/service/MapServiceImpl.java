@@ -19,6 +19,11 @@ public class MapServiceImpl implements MapService {
 	public List<GeoTree> findBySuburb(String suburb) {
 		return treeGeoRepository.findBySuburb(suburb);
 	}
+
+	@Override
+	public List<GeoTree> findByCoordinates(double lon, double lat, int limit) {
+		return treeGeoRepository.findByCoordinates(lon, lat, limit);
+	}
 	
 
 }
