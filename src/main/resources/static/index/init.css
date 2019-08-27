@@ -141,3 +141,8 @@ body
 	position: absolute;
 	right: 10px;
 }
+
+.back {
+	position: absolute;
+	bottom: 0;
+}

@@ -96,8 +96,12 @@
 						})
 					},600);
 				});
-
 			});
+			function toFirstD() {
+				$("#yesD").hide();
+				$("#noD").hide();
+				$("#firstD").show();
+			}
 		</script>
 	</head>
 	<body>
@@ -154,6 +158,7 @@
 					</table>
 				</form>
 			</div>
+			<a onclick="toFirstD()" href="javascript:void(0)" class="back">back</a>
 		</div>
 		<div class="funA" th:if="${myTree == null}" id="yesD" style="display: none">
 			<div class="table">
@@ -189,6 +194,7 @@
 					</table>
 				</form>
 			</div>
+			<a onclick="toFirstD()" href="javascript:void(0)" class="back">back</a>
 		</div>
 		<div>
 			<h3 th:text="${myTree == null ? 'not login': 'Hello: ' + myTree.name + ', This is your id:' + myTree.id}"></h3>
