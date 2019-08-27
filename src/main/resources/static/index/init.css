@@ -17,6 +17,32 @@ body
 		font-family: Arial,"Hiragino Sans GB";
 	}
 
+#topD {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 40px;
+	width: 100%;
+	background-color: darkolivegreen;
+	padding: 4px 0;
+}
+
+#wel {
+	font-size: 14px;
+	color: #FFF;
+	position: absolute;
+	top: 3%;
+	right: 100px;
+}
+
+#logout {
+	font-size: 14px;
+	color: #FFF;
+	position: absolute;
+	top: 30%;
+	right: 30px;
+}
+
 .funA {
 	position: absolute;
 	right: 200px;
@@ -137,12 +163,14 @@ body
 	bottom: -30px;
 }
 
-#logout {
-	position: absolute;
-	right: 10px;
-}
-
 .back {
 	position: absolute;
 	bottom: 0;
+	right: 0;
+}
+
+#error {
+	position: absolute;
+	left: 0;
+	bottom: 10px;
 }

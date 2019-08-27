@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8">
-		<title>login</title>
+		<title>My TreePal</title>
 		<link href="index/init.css" rel="stylesheet" type="text/css" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"> </script>
@@ -33,7 +33,7 @@
 					setTimeout(function () {
 						$("#firstD").hide();
 						$("#yesD").show();
-					},600);
+					},550);
 				});
 
 				var $noB = document.getElementById('noBtn');
@@ -42,7 +42,7 @@
 					setTimeout(function () {
 						$("#firstD").hide();
 						$("#noD").show();
-					},600);
+					},550);
 				});
 
 				var $loginB = document.getElementById("loginBtn");
@@ -51,12 +51,12 @@
 					var name_tree = $("#name").val();
 					var id_tree = $("#id").val();
 					if(name_tree === ""){
-						alert("Tree pal name cannot be empty~");
+						alert("TreePal name cannot be empty~");
 						$("#name").focus();
 						return ;
 					}
 					if(id_tree === ""){
-						alert("Tree pal id cannot be empty~");
+						alert("TreePal id cannot be empty~");
 						$("#id").focus();
 						return ;
 					}
@@ -71,7 +71,7 @@
 								$("#errorMsg").style.display="block";
 							}
 						})
-					},600);
+					},550);
 				});
 
 				var $registB = document.getElementById("registBtn");
@@ -79,7 +79,7 @@
 					jelly($registB);
 					var name = $("#regname").val();
 					if(name === ""){
-						alert("Please provide a tree pal name");
+						alert("Please provide a TreePal name");
 						$("#regname").focus();
 						return ;
 					}
@@ -87,6 +87,7 @@
 					setTimeout(function () {
 						$.get(url, function (result) {
 							if(result.code === 200) {
+								alert("Please remember your TreePal id: " + result.data.id);
 								window.location.href="/index";
 							}
 							else {
@@ -94,7 +95,7 @@
 								$("#errorMsg").style.display="block";
 							}
 						})
-					},600);
+					},550);
 				});
 			});
 			function toFirstD() {
@@ -105,6 +106,10 @@
 		</script>
 	</head>
 	<body>
+	<div id="topD">
+		<p id="wel" th:text="${myTree == null ? 'Welcome': 'TreePal: ' + myTree.name + ', id:' + myTree.id}"></p>
+		<a id="logout" href="/logout" th:if="${myTree != null}">logout</a>
+	</div>
 		<div class="funA" th:if="${myTree == null}" id="firstD" style="display: block">
 			<div class="table">
 					<table>
@@ -116,7 +121,7 @@
                         <tr>
 							<td align="center">
 								<div class="btn" id="yesBtn">
-									<p>Yes! I come to visit my friend!</p>
+									<p>Yes! I'm here to see my friend!</p>
 								</div>
 							</td>
                         </tr>
@@ -140,7 +145,7 @@
 						</tr>
 						<tr>
 							<td align="center">
-								<h3 class="tipLine2">Give a name to your friend!</h3>
+								<h3 class="tipLine2">Enter your new TreePal name</h3>
 							</td>
 						</tr>
 						<tr>
@@ -171,7 +176,7 @@
 						</tr>
 						<tr>
 							<td>
-								<input class="ans" type="text" name="id" id="id" placeholder="Your tree pal id"/>
+								<input class="ans" type="text" name="id" id="id" placeholder="Your TreePal id"/>
 							</td>
 						</tr>
 						<tr>
@@ -181,7 +186,7 @@
 						</tr>
 						<tr>
 							<td>
-								<input class="ans" type="text" name="name" id="name" placeholder="Your tree pal name">
+								<input class="ans" type="text" name="name" id="name" placeholder="Your TreePal name">
 							</td>
 						</tr>
 						<tr>
@@ -196,13 +201,7 @@
 			</div>
 			<a onclick="toFirstD()" href="javascript:void(0)" class="back">back</a>
 		</div>
-		<div>
-			<h3 th:text="${myTree == null ? 'not login': 'Hello: ' + myTree.name + ', This is your id:' + myTree.id}"></h3>
-		</div>
-		<div id="logout" th:if="${myTree != null}">
-			<a href="/logout">logout</a>
-		</div>
-		<div>
+		<div id="error">
 			<span style="display: none" id="errorMsg"></span>
 		</div>
 	</body>
