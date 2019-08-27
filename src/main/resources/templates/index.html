@@ -5,35 +5,78 @@
 		<title>login</title>
 		<link href="index/init.css" rel="stylesheet" type="text/css" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"> </script>
 		<script type="text/javascript">
 			$(function(){
-				$("#loginBtn").click(function(){
-					var name_tree = $("#name").val();//取值
+				function jelly(bt) {
+					var duration = 0.3, delay = 0.08;
+					TweenMax.to(bt, duration, {scaleY: 1.6, ease: Expo.easeOut});
+					TweenMax.to(bt, duration, {
+						scaleX: 1.2,
+						scaleY: 1,
+						ease: Back.easeOut,
+						easeParams: [3],
+						delay: delay
+					});
+					TweenMax.to(bt, duration * 1.25, {
+						scaleX: 1,
+						scaleY: 1,
+						ease: Back.easeOut,
+						easeParams: [6],
+						delay: delay * 3
+					});
+				}
+
+				var $yesB = document.getElementById('yesBtn');
+				$yesB.addEventListener('click',function () {
+					jelly($yesB);
+					setTimeout(function () {
+						$("#firstD").hide();
+						$("#yesD").show();
+					},600);
+				});
+
+				var $noB = document.getElementById('noBtn');
+				$noB.addEventListener('click',function () {
+					jelly($noB);
+					setTimeout(function () {
+						$("#firstD").hide();
+						$("#noD").show();
+					},600);
+				});
+
+				var $loginB = document.getElementById("loginBtn");
+				$loginB.addEventListener('click', function () {
+					jelly($loginB);
+					var name_tree = $("#name").val();
 					var id_tree = $("#id").val();
 					if(name_tree === ""){
 						alert("Tree pal name cannot be empty~");
-						$("#name").focus();//获取焦点
+						$("#name").focus();
 						return ;
 					}
 					if(id_tree === ""){
 						alert("Tree pal id cannot be empty~");
-						$("#id").focus();//获取焦点
+						$("#id").focus();
 						return ;
 					}
-					//var param = "username="+username+"&password="+password;
 					var param = {fakeId: id_tree, name: name_tree};
-					$.post("/tree/viewMyTree",param, function(result) {
-						if (result.code == 200) {
-							window.location.href="/index";
-						}
-						else {
-							$("#errorMsg").innerHTML = result.msg;
-							$("#errorMsg").style.display="block";
-						}
-					})
+					setTimeout(function () {
+						$.post("/tree/viewMyTree",param, function(result) {
+							if (result.code === 200) {
+								window.location.href="/index";
+							}
+							else {
+								$("#errorMsg").innerHTML = result.msg;
+								$("#errorMsg").style.display="block";
+							}
+						})
+					},600);
 				});
 
-				$("#registBtn").click(function() {
+				var $registB = document.getElementById("registBtn");
+				$registB.addEventListener('click',function () {
+					jelly($registB);
 					var name = $("#regname").val();
 					if(name === ""){
 						alert("Please provide a tree pal name");
@@ -41,47 +84,45 @@
 						return ;
 					}
 					var url = "tree/getNewTree?name=" + name;
-					$.get(url, function (result) {
-						if(result.code == 200) {
-							window.location.href="/index";
-						}
-						else {
-							$("#errorMsg").innerHTML = result.msg;
-							$("#errorMsg").style.display="block";
-						}
-					})
+					setTimeout(function () {
+						$.get(url, function (result) {
+							if(result.code === 200) {
+								window.location.href="/index";
+							}
+							else {
+								$("#errorMsg").innerHTML = result.msg;
+								$("#errorMsg").style.display="block";
+							}
+						})
+					},600);
 				});
 
-				$("#yesBtn").click(function() {
-					$("#firstD").hide();
-					$("#yesD").show();
-				});
-
-				$("#noBtn").click(function () {
-					$("#firstD").hide();
-					$("#noD").show();
-				});
 			});
 		</script>
 	</head>
 	<body>
 		<div class="funA" th:if="${myTree == null}" id="firstD" style="display: block">
 			<div class="table">
-				<form>
 					<table>
 						<tr>
 							<td align="center">
-								<h3> Do you have a tree pal?</h3>
+								<h2 class="tipLine"> Do you have a tree pal?</h2>
 							</td>
+                        </tr>
+                        <tr>
 							<td align="center">
-								<input type="button" value="I have a tree pal" id="yesBtn"/>
+								<div class="btn" id="yesBtn">
+									<p>Yes! I come to visit my friend!</p>
+								</div>
 							</td>
+                        </tr>
 							<td align="center">
-								<input type="button" value="I don't have a tree pal" id="noBtn">
+								<div class="btn" id="noBtn">
+									<p>No. I want have one!</p>
+								</div>
 							</td>
 						</tr>
 					</table>
-				</form>
 			</div>
 		</div>
 		<div class="funA" th:if="${myTree == null}" id="noD" style="display: none">
@@ -90,20 +131,24 @@
 					<table>
 						<tr>
 							<td align="center">
-								<h3>Let's make friends!</h3>
+								<h2 class="tipLine">Let's make friends!</h2>
 							</td>
 						</tr>
 						<tr>
-							<td class="t-left">
-								<label for="regname">Tree pal name</label>
-							</td>
-							<td class="t-right">
-								<input type="text" name="regname" id="regname" placeholder="Give a name to your tree pal"/>
+							<td align="center">
+								<h3 class="tipLine2">Give a name to your friend!</h3>
 							</td>
 						</tr>
-						<tr align="center">
-							<td colspan="2">
-								<input type="button" value="GetTreePal" id="registBtn"/>
+						<tr>
+							<td align="center">
+								<input class="ans" type="text" name="regname" id="regname" placeholder="Name for your tree pal">
+							</td>
+						</tr>
+						<tr>
+							<td align="center">
+								<div class="btn" id="registBtn">
+									<p>Get a tree pal!</p>
+								</div>
 							</td>
 						</tr>
 					</table>
@@ -115,32 +160,41 @@
 				<form>
 					<table>
 						<tr>
-							<td class="t-left">
-								<label for="id">Tree pal id</label>
-							</td>
-							<td class="t-right">
-								<input type="text" name="id" id="id" placeholder="Your tree pal id"/>
+							<td>
+								<p class="forId">Tree pal Id:</p>
 							</td>
 						</tr>
 						<tr>
-							<td class="t-left">
-								<label for="name">Tree pal name</label>
-							</td>
-							<td class="t-right">
-								<input type="text" name="name" id="name" placeholder="Your tree pal name">
+							<td>
+								<input class="ans" type="text" name="id" id="id" placeholder="Your tree pal id"/>
 							</td>
 						</tr>
-						<tr align="center">
-							<td colspan="2">
-								<input type="button" value="Login" id="loginBtn">
+						<tr>
+							<td>
+								<p class="forName">Tree pal name:</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="ans" type="text" name="name" id="name" placeholder="Your tree pal name">
+							</td>
+						</tr>
+						<tr>
+							<td align="center">
+								<div class="btn" id="loginBtn">
+									<p>Hi, my friend~</p>
+								</div>
 							</td>
 						</tr>
 					</table>
 				</form>
 			</div>
 		</div>
-		<div class="hello">
+		<div>
 			<h3 th:text="${myTree == null ? 'not login': 'Hello: ' + myTree.name + ', This is your id:' + myTree.id}"></h3>
+		</div>
+		<div id="logout" th:if="${myTree != null}">
+			<a href="/logout">logout</a>
 		</div>
 		<div>
 			<span style="display: none" id="errorMsg"></span>
