@@ -41,9 +41,9 @@ public class Properties {
 	
 	private Object northing;
 	
-	private String fulladdress;
+	private Object fulladdress;
 	
-	private String suburb;
+	private Object suburb;
 	
 	public Properties() {
 		
@@ -213,19 +213,19 @@ public class Properties {
 		this.northing = northing;
 	}
 
-	public String getFulladdress() {
+	public Object getFulladdress() {
 		return fulladdress;
 	}
 
-	public void setFulladdress(String fulladdress) {
+	public void setFulladdress(Object fulladdress) {
 		this.fulladdress = fulladdress;
 	}
 
-	public String getSuburb() {
+	public Object getSuburb() {
 		return suburb;
 	}
 
-	public void setSuburb(String suburb) {
+	public void setSuburb(Object suburb) {
 		this.suburb = suburb;
 	}
 

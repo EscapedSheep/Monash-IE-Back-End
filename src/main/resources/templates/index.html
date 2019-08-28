@@ -109,7 +109,7 @@
 	</head>
 	<body>
 	<div id="topD">
-		<p id="wel" th:text="${myTree == null ? 'Welcome': 'TreePal: ' + myTree.name + ', id:' + myTree.id}"></p>
+		<p id="wel" th:text="${myTree == null ? 'Welcome': 'TreePal: ' + myTree.name + ', id: ' + myTree.id}"></p>
 		<a id="logout" href="/logout" th:if="${myTree != null}">logout</a>
 	</div>
 		<div class="funA" th:if="${myTree == null}" id="firstD" style="display: block">

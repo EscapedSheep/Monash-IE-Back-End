@@ -26,7 +26,7 @@ public class TreeGeoRepositoryImpl implements TreeGeoRepository {
 
 	@Override
 	public List<GeoTree> findByCoordinates(double lon, double lat, int limit) {
-		Query query = new Query(Criteria.where("geometry.coordinates").near(new Point(lon,lat)));
+		Query query = new Query(Criteria.where("geometry.coordinates").nearSphere(new Point(lon,lat)));
 		query.limit(limit);
 		return mongoTemplate.find(query, GeoTree.class);
 	}

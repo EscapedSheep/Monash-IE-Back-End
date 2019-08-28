@@ -27,9 +27,9 @@ public class ActivityController extends BaseController{
 		this.mapService = mapService;
 	}
 	
-	@RequestMapping(value="/findBySuburb", method = RequestMethod.POST)
+	@RequestMapping(value="/findBySuburb", method = RequestMethod.GET)
 	@ResponseBody
-	public RestResult findBySuburb(@RequestParam String suburb) {
+	public RestResult findBySuburb(String suburb) {
 		try {
 			return resultGenerater.getSuccessResult(mapService.findBySuburb(suburb));
 		}

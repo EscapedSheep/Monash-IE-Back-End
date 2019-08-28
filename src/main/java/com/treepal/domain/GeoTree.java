@@ -2,6 +2,9 @@ package com.treepal.domain;
 
 import java.io.Serializable;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="treeGeo")
 public class GeoTree implements Serializable{
 	private static final long serialVersionUID = -3258839839160856613L;
 	
