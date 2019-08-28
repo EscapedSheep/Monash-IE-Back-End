@@ -62,6 +62,7 @@ body
 #disBox p {
 	position: relative;
 	left: 10%;
+	top: 10px;
 }
 
 #know {
@@ -78,12 +79,20 @@ body
 	color: #3BB129;
 }
 
+#logo {
+	position: relative;
+	left: 20px;
+	top: 5px;
+	height: 60px;
+	width: 120px;
+}
+
 .funA {
 	position: absolute;
 	right: 100px;
 	top: 200px;
-	width: 500px;
-	height: 600px;
+	width: 40%;
+	height: 50%;
 	background-color: rgba(241,196,15,1);
 }
 .tipLine {

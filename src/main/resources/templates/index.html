@@ -109,15 +109,14 @@
 	</head>
 	<body>
 		<div id="topD">
+			<img src="img/logo2.png" alt="MyTreePal" id="logo">
 			<p id="wel" th:text="${myTree == null ? 'Welcome': 'TreePal: ' + myTree.name + ', id: ' + myTree.id}"></p>
 			<a id="logout" href="/logout" th:if="${myTree != null}">logout</a>
 		</div>
 		<div id="disBox">
-			<img src="" alt="logo here" id="logoHere">
 			<p id="know">How much you know about the tree around you?</p>
 			<p id="old">How old is the tree in the front of you home?</p>
 			<p id="come">Come on! Explore the tree here!</p>
-			<div id="img"></div>
 		</div>
 		<div class="funA" th:if="${myTree == null}" id="firstD" style="display: block">
 			<div class="table">
@@ -159,13 +158,13 @@
 						</tr>
 						<tr>
 							<td align="center">
-								<input class="ans" type="text" name="regname" id="regname" placeholder="Name for your tree pal">
+								<input class="ans" type="text" name="regname" id="regname" placeholder="Name for your TreePal">
 							</td>
 						</tr>
 						<tr>
 							<td align="center">
 								<div class="btn" id="registBtn">
-									<p>Get a tree pal!</p>
+									<p>Get a TreePal!</p>
 								</div>
 							</td>
 						</tr>
@@ -180,7 +179,7 @@
 					<table>
 						<tr>
 							<td>
-								<p class="forId">Tree pal Id:</p>
+								<p class="forId">TreePal Id:</p>
 							</td>
 						</tr>
 						<tr>
@@ -190,7 +189,7 @@
 						</tr>
 						<tr>
 							<td>
-								<p class="forName">Tree pal name:</p>
+								<p class="forName">TreePal name:</p>
 							</td>
 						</tr>
 						<tr>
