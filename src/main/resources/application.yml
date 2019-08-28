@@ -14,3 +14,7 @@ Spring:
     mongodb:
       uri: mongodb://mark:123456mark@ds151805.mlab.com:51805/heroku_1sqz91f0
 
+Server:
+  compression:
+    enabled: true
+    mime-types: application/json

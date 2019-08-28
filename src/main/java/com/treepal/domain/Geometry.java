@@ -11,6 +11,12 @@ public class Geometry {
 		
 	}
 
+	public Geometry(String type, double[] coordinates) {
+		super();
+		this.type = type;
+		this.coordinates = coordinates;
+	}
+
 	public String getType() {
 		return type;
 	}

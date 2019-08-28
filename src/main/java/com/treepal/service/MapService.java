@@ -2,12 +2,14 @@ package com.treepal.service;
 
 import java.util.List;
 
-import org.springframework.data.geo.GeoResults;
+import com.treepal.domain.GeoTree;
 
-import com.treepal.domain.TreeGeo;
 
 public interface MapService {
 	
-	GeoResults<TreeGeo> findNearbyTree(double[] coordinates, int limit);
+	List<GeoTree> findBySuburb(String suburb);
 
+	List<GeoTree> findByCoordinates(double lon, double lat, int limit);
+
+	//GeoTree save(double lon, double lat, String name, Object genus, Object family, Object diameter_breast_height, Object year_planted, Object date_planted, Object fulladdress, Object suburb);
 }

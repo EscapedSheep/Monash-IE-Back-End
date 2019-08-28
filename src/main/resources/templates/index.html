@@ -2,116 +2,214 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8">
-		<title>login</title>
+		<title>My TreePal</title>
 		<link href="index/init.css" rel="stylesheet" type="text/css" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"> </script>
 		<script type="text/javascript">
 			$(function(){
-				$("#loginBtn").click(function(){
-					var name_tree = $("#name").val();//取值
+				function jelly(bt) {
+					var duration = 0.3, delay = 0.08;
+					TweenMax.to(bt, duration, {scaleY: 1.6, ease: Expo.easeOut});
+					TweenMax.to(bt, duration, {
+						scaleX: 1.2,
+						scaleY: 1,
+						ease: Back.easeOut,
+						easeParams: [3],
+						delay: delay
+					});
+					TweenMax.to(bt, duration * 1.25, {
+						scaleX: 1,
+						scaleY: 1,
+						ease: Back.easeOut,
+						easeParams: [6],
+						delay: delay * 3
+					});
+				}
+
+				var $yesB = document.getElementById('yesBtn');
+				$yesB.addEventListener('click',function () {
+					jelly($yesB);
+					setTimeout(function () {
+						$("#firstD").hide();
+						$("#yesD").show();
+					},550);
+				});
+
+				var $noB = document.getElementById('noBtn');
+				$noB.addEventListener('click',function () {
+					jelly($noB);
+					setTimeout(function () {
+						$("#firstD").hide();
+						$("#noD").show();
+					},550);
+				});
+
+				var $loginB = document.getElementById("loginBtn");
+				$loginB.addEventListener('click', function () {
+					jelly($loginB);
+					var name_tree = $("#name").val();
 					var id_tree = $("#id").val();
 					if(name_tree === ""){
-						alert("Tree pal name cannot be empty~");
-						$("#name").focus();//获取焦点
+						alert("TreePal name cannot be empty~");
+						$("#name").focus();
 						return ;
 					}
 					if(id_tree === ""){
-						alert("Tree pal id cannot be empty~");
-						$("#id").focus();//获取焦点
+						alert("TreePal id cannot be empty~");
+						$("#id").focus();
 						return ;
 					}
-					//var param = "username="+username+"&password="+password;
 					var param = {fakeId: id_tree, name: name_tree};
-					$.post("/tree/viewMyTree",param, function(result) {
-						if (result.code == 200) {
-							window.location.href="/index";
-						}
-						else {
-							$("errorMsg").innerHTML = result.msg;
-							$("errorMsg").style.display="block"
-						}
-					})
+					setTimeout(function () {
+						$.post("/tree/viewMyTree",param, function(result) {
+							if (result.code === 200) {
+								window.location.href="/index";
+							}
+							else {
+								alert(result.msg);
+								$("#errorMsg").innerHTML = result.msg;
+								$("#errorMsg").style.display="block";
+							}
+						})
+					},550);
 				});
 
-				$("#registBtn").click(function() {
+				var $registB = document.getElementById("registBtn");
+				$registB.addEventListener('click',function () {
+					jelly($registB);
 					var name = $("#regname").val();
 					if(name === ""){
-						alert("Please provide a tree pal name");
+						alert("Please provide a TreePal name");
 						$("#regname").focus();
 						return ;
 					}
 					var url = "tree/getNewTree?name=" + name;
-					$.get(url, function (result) {
-						if(result.code == 200) {
-							window.location.href="/index"
-						}
-						else {
-							$("errorMsg").innerHTML = result.msg;
-							$("errorMsg").style.display="block"
-						}
-					})
+					setTimeout(function () {
+						$.get(url, function (result) {
+							if(result.code === 200) {
+								alert("Please remember your TreePal id: " + result.data.id);
+								window.location.href="/index";
+							}
+							else {
+								alert(result.msg);
+								$("#errorMsg").innerHTML = result.msg;
+								$("#errorMsg").style.display="block";
+							}
+						})
+					},550);
 				});
 			});
+			function toFirstD() {
+				$("#yesD").hide();
+				$("#noD").hide();
+				$("#firstD").show();
+			}
 		</script>
 	</head>
 	<body>
-		<div class="left">
-			<p class="first">Wanna have a tree pal?</p>
-			<p class="third">Regist one!</p>
-			<a th:unless="${myTree == null}" href="/logout">logout</a>
+		<div id="topD">
+			<img src="img/logo2.png" alt="MyTreePal" id="logo">
+			<p id="wel" th:text="${myTree == null ? 'Welcome': 'TreePal: ' + myTree.name + ', id: ' + myTree.id}"></p>
+			<a id="logout" href="/logout" th:if="${myTree != null}">logout</a>
 		</div>
-		<div class="mid">
+		<div id="disBox">
+			<p id="know">How much do you know about the trees around you?</p>
+			<p id="old">How old are the trees in your area?</p>
+			<p id="come">Come on! Explore here!</p>
+		</div>
+		<div class="funA" th:if="${myTree == null}" id="firstD" style="display: block">
 			<div class="table">
-				<form th:if="${myTree == null}">
 					<table>
 						<tr>
-							<td class="t-left">
-								<label for="regname">Tree pal name</label>
+							<td align="center">
+								<h2 class="tipLine"> Do you have a TreePal?</h2>
 							</td>
-							<td class="t-right">
-								<input type="text" name="regname" id="regname" placeholder="Give a name to your tree pal"/>
+                        </tr>
+                        <tr>
+							<td align="center">
+								<div class="btn" id="yesBtn">
+									<p>Yes! I'm here to see my friend!</p>
+								</div>
+							</td>
+                        </tr>
+							<td align="center">
+								<div class="btn" id="noBtn">
+									<p>No. I want have one!</p>
+								</div>
 							</td>
 						</tr>
-						<tr align="center">
-							<td colspan="2">
-								<input type="button" value="GetTreePal" id="registBtn"/>
+					</table>
+			</div>
+		</div>
+		<div class="funA" th:if="${myTree == null}" id="noD" style="display: none">
+			<div class="table">
+				<form>
+					<table>
+						<tr>
+							<td align="center">
+								<h2 class="tipLine">Let's make friends!</h2>
+							</td>
+						</tr>
+						<tr>
+							<td align="center">
+								<h3 class="tipLine2">Enter your new TreePal name</h3>
+							</td>
+						</tr>
+						<tr>
+							<td align="center">
+								<input class="ans" type="text" name="regname" id="regname" placeholder="Name for your TreePal">
+							</td>
+						</tr>
+						<tr>
+							<td align="center">
+								<div class="btn" id="registBtn">
+									<p>Get a TreePal!</p>
+								</div>
 							</td>
 						</tr>
 					</table>
 				</form>
 			</div>
+			<a onclick="toFirstD()" href="javascript:void(0)" class="back">back</a>
 		</div>
-		<div class="right">
-			<h3 th:text="${myTree == null ? 'not login': 'Hello: ' + myTree.name}"></h3>
+		<div class="funA" th:if="${myTree == null}" id="yesD" style="display: none">
 			<div class="table">
-				<form th:if="${myTree == null}">
+				<form>
 					<table>
 						<tr>
-							<td class="t-left">
-								<label for="id">Tree pal id</label>
-							</td>
-							<td class="t-right">
-								<input type="text" name="id" id="id" placeholder="Your tree pal id"/>
+							<td>
+								<p class="forId">TreePal Id:</p>
 							</td>
 						</tr>
 						<tr>
-							<td class="t-left">
-								<label for="name">Tree pal name</label>
-							</td>
-							<td class="t-right">
-								<input type="text" name="name" id="name" placeholder="Your tree pal name">
+							<td>
+								<input class="ans" type="text" name="id" id="id" placeholder="Your TreePal id"/>
 							</td>
 						</tr>
-						<tr align="center">
-							<td colspan="2">
-								<input type="button" value="Login" id="loginBtn">
+						<tr>
+							<td>
+								<p class="forName">TreePal name:</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="ans" type="text" name="name" id="name" placeholder="Your TreePal name">
+							</td>
+						</tr>
+						<tr>
+							<td align="center">
+								<div class="btn" id="loginBtn">
+									<p>Hi, my friend~</p>
+								</div>
 							</td>
 						</tr>
 					</table>
 				</form>
 			</div>
+			<a onclick="toFirstD()" href="javascript:void(0)" class="back">back</a>
 		</div>
-		<div>
+		<div id="error">
 			<span style="display: none" id="errorMsg"></span>
 		</div>
 	</body>

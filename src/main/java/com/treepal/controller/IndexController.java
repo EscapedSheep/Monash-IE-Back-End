@@ -55,4 +55,9 @@ public class IndexController extends BaseController{
 		response.addCookie(cookie);
 		return "index";
 	}
+	
+	@RequestMapping(value="/addTree",method=RequestMethod.GET)
+	public String addTree() {
+		return "/addTree";
+	}
 }

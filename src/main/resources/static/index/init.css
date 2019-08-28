@@ -1,100 +1,223 @@
+html {
+	margin: 0 auto;
+	padding:0;
+	height:100%;
+}
+
 body
 	{
-		background-image:url('../img/bcg2.png');
+		background-image:url('../img/bc-pen.jpg');
 		background-size:cover;
 		background-position: center center;
 		background-attachment: fixed;
-		background-color:#CCCCCC;
 		background-repeat: no-repeat;
+
+		background-color:#f1c40f;
+		height:100%;
+		font-family: Arial,"Hiragino Sans GB";
 	}
 
-* {
-	padding: 0px;
-	margin: 0px;
-	box-sizing: border-box;
+#topD {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 80px;
+	width: 100%;
+	background-color: #333;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 }
 
-body > div {
-	/*最外层容器指定大小,边框，水平居中, */
-	width: 850px;
-	height: 400px;
-	/*background-color: white;*/
-	border: gray solid 8px;
-	margin: 60px auto;
+#wel {
+	font-size: 14px;
+	color: #FFF;
+	position: absolute;
+	top: 13%;
+	right: 100px;
 }
 
-/* -------------------------------------------------------- */
-/*左浮动*/
-.left {
-	float: left;
+#logout {
+	font-size: 14px;
+	color: #FFF;
+	position: absolute;
+	top: 30%;
+	right: 30px;
+}
+
+#disBox {
+	position: absolute;
+	top: 32%;
+	width: 39%;
+	left: 23%;
+	height: 60%;
+	/*
+	background-image: url('../img/hd-bc.png');
+	background-size: 70% 60%;
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	*/
+	font-family: "Comic Sans MS";
+	font-size: 26px;
+}
+#disBox p {
+	position: relative;
+	left: 10%;
+	top: 10px;
+}
+
+#know {
+	color: #006DB0;
+}
+
+#old {
+	color: #735D8E;
+	position: relative;
+	bottom: 5px;
+}
+
+#come {
+	color: #3BB129;
+}
+
+#logo {
+	position: relative;
+	left: 5%;
+	top: 5%;
+	height: 80%;
+	width: 10%;
+}
+
+.funA {
+	position: absolute;
+	right: 80px;
+	top: 200px;
 	width: 25%;
-	margin-left: 20px;
-	margin-top: 20px;
+	height: 65%;
+	background-color: rgba(241,196,15,1);
+}
+.tipLine {
+	position: absolute;
+	left: 10%;
+	top: 5%;
+	color: #FFF;
 }
 
-.first {
-	font-size: 20px;
-	color: orange;
-
+.ans {
+	position: absolute;
+	left: 11%;
+	outline-style: none;
+	border-radius: 3px;
+	width: 80%;
+	font-size: 18px;
+	padding: 7px 0px;
+	font-family: Arial;
 }
 
-.left p:last-child {
-	font-size: 20px;
-	color: gray;
+
+.forId {
+	position: absolute;
+	left: 10%;
+	top: 5%;
+	font-size: 16px;
 }
 
-/* -------------------------------------------------------- */
-
-.mid {
-	font-size: 15px;
-	float: left;
-	width: 47%;
+#id {
+	top: 15%
 }
 
-.table {
-	margin-top: 25px;
-	float: left;
+.forName {
+	position: absolute;
+	left: 10%;
+	top: 35%;
+	font-size: 16px;
 }
 
-.t-left {
-	/*文字靠左边*/
-	text-align: left;
-
+#name {
+	top :45%;
 }
 
-.t-right {
+#regname {
+	top: 30%
 }
 
-/* 表单中的文本框，日期框，密码框使用属性选择器，宽256，高32，行高32，内边距上下6，左右12，
-圆角4，边框：1 实线 颜色#a6a6a6，右浮动*/
-input[type="text"], input[type="date"], input[type="password"], input[type="email"],
-input[type="tel"], input[type="radio"] {
-	padding-top: 6px;
-	padding-bottom: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 4px; /*圆角*/
-	border: gray solid 1px;
-	margin-left: 30px; /*指定左边距，调节左边距的距离*/
+.tipLine2 {
+	position: absolute;
+	left: 10%;
+	top: 15%;
+	color: #FFF;
+}
+.btn {
+	background-color: #3498db;
+	width: 80%;
+	padding: 4px 0;
+	/*position: absolute;
+	left: 50%;
+	top: 50%;
+	 */
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	border-radius: 3px;
 }
 
-input[type="radio"] {
+#registBtn {
+	position: absolute;
+	left: 50%;
+	top: 80%;
 }
 
-/* -------------------------------------------------------- */
-.right {
-	float: right;
-	width: 25%;
+#yesBtn {
+	position: absolute;
+	left: 50%;
+	top: 40%
 }
 
-.right p {
-	font-size: 15px;
-	padding: 10px 10px 0px 0px;
-	float: right;
-	margin-left: 30px;
+#noBtn {
+	position: absolute;
+	left: 50%;
+	top: 80%;
 }
 
-/*验证码*/
-.check {
-	margin-left: 30px;
+#loginBtn {
+	position: absolute;
+	left: 50%;
+	top: 80%;
+}
+
+.btn p:last-child {
+	text-align: center;
+	/*text-transform: uppercase;*/
+	color: #FFF;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+.btn:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 10%;
+	border-radius: 50%;
+	background-color: #927608;
+	opacity: 0.4;
+	bottom: -30px;
+}
+
+.back {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+#error {
+	position: absolute;
+	left: 0;
+	bottom: 10px;
 }
