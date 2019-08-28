@@ -15,9 +15,12 @@
         <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.min.js'></script>
         <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.css'/>
         <div id="goHome">
+            <p id="wel" th:text="${myTree == null ? 'Welcome': 'TreePal: ' + myTree.name + ', id: ' + myTree.id}"></p>
             <a href="/index">Back</a>
         </div>
-        <div class="welcome">Welcome! Search and learn more about your TreePal!</div>
+        <div class="welcome">
+            <p>Welcome! Search and learn more about your TreePal!</p>
+        </div>
         <div id='geocoder' class='geocoder'></div>
         <div class='sidebar'>
             <div id='listings' class='listings'></div>
