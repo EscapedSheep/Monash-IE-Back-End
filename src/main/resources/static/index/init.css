@@ -6,12 +6,12 @@ html {
 
 body
 	{
-		/*background-image:url('../img/bcg2.png');
+		background-image:url('../img/bc-pen.jpg');
 		background-size:cover;
 		background-position: center center;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
-		*/
+
 		background-color:#f1c40f;
 		height:100%;
 		font-family: Arial,"Hiragino Sans GB";
@@ -21,7 +21,7 @@ body
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 40px;
+	height: 60px;
 	width: 100%;
 	background-color: darkolivegreen;
 	padding: 4px 0;
@@ -31,7 +31,7 @@ body
 	font-size: 14px;
 	color: #FFF;
 	position: absolute;
-	top: 3%;
+	top: 13%;
 	right: 100px;
 }
 
@@ -43,12 +43,48 @@ body
 	right: 30px;
 }
 
+#disBox {
+	position: absolute;
+	top: 32%;
+	width: 39%;
+	left: 23%;
+	height: 60%;
+	/*
+	background-image: url('../img/hd-bc.png');
+	background-size: 70% 60%;
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	*/
+	font-family: "Comic Sans MS";
+	font-size: 26px;
+}
+#disBox p {
+	position: relative;
+	left: 10%;
+}
+
+#know {
+	color: #006DB0;
+}
+
+#old {
+	color: #735D8E;
+	position: relative;
+	bottom: 5px;
+}
+
+#come {
+	color: #3BB129;
+}
+
 .funA {
 	position: absolute;
-	right: 200px;
+	right: 100px;
 	top: 200px;
 	width: 500px;
 	height: 600px;
+	background-color: rgba(241,196,15,1);
 }
 .tipLine {
 	position: absolute;
