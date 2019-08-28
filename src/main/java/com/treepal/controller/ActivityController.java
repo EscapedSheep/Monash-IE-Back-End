@@ -49,16 +49,6 @@ public class ActivityController extends BaseController{
 			return resultGenerater.getFailResult(e.getMessage());
 		}
 	}
-	/*
-	@RequestMapping(value="/addTreeRecord", method=RequestMethod.POST)
-	public RestResult addTreeRecord(double lon, double lat, String name, Object genus, Object family, Object height, Object year_planted, Object date_planted, Object fulladdress, Object suburb) {
-		try {
-			GeoTree result = mapService.save(lon, lat, name, genus, family, height, year_planted, date_planted, fulladdress, suburb);
-			return resultGenerater.getSuccessResult(result);
-		}
-		catch(Exception e) {
-			return resultGenerater.getFailResult(e.getMessage());
-		}
-	}
-	*/
+
+	public RestResult addTree() {return null;};
 }

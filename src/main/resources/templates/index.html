@@ -64,7 +64,7 @@
 					setTimeout(function () {
 						$.post("/tree/viewMyTree",param, function(result) {
 							if (result.code === 200) {
-								window.location.href="/index";
+								window.location.href="/activity";
 							}
 							else {
 								alert(result.msg);
@@ -89,7 +89,7 @@
 						$.get(url, function (result) {
 							if(result.code === 200) {
 								alert("Please remember your TreePal id: " + result.data.id);
-								window.location.href="/index";
+								window.location.href="/activity";
 							}
 							else {
 								alert(result.msg);

@@ -26,29 +26,25 @@ public class MapServiceImpl implements MapService {
 	public List<GeoTree> findByCoordinates(double lon, double lat, int limit) {
 		return treeGeoRepository.findByCoordinates(lon, lat, limit);
 	}
-/*
+
 	@Override
-	public GeoTree save(double lon, double lat, String name, Object genus, Object family, Object diameter_breast_height,
-			Object year_planted, Object date_planted, Object fulladdress, Object suburb) {
-		GeoTree re = new GeoTree();
+	public GeoTree save(String species, double lon, double lat, String scientific, String common, String source,
+			String height) {
 		Properties p = new Properties();
-		Geometry geo = new Geometry();
-		double[] co = {lon, lat};
-		geo.setCoordinates(co);
-		p.setCommon_name(name);
-		p.setGenus(genus);
-		p.setFamily(family);
-		p.setDate_planted(date_planted);
-		p.setDiameter_breast_height(diameter_breast_height);
-		p.setYear_planted(year_planted);
-		p.setDate_planted(date_planted);
-		p.setFulladdress(fulladdress);
-		p.setSuburb(suburb);
-		re.setGeometry(geo);
-		re.setProperties(p);
-		return treeGeoRepository.save(re);
+		GeoTree result = new GeoTree();
+		Geometry m = new Geometry();
+		p.setSpecies(species);
+		p.setScientific(scientific);
+		p.setCommon(common);
+		p.setSource(source);
+		p.setHeight(height);
+		double[] coor = {lon,lat};
+		m.setCoordinates(coor);
+		result.setGeometry(m);
+		result.setProperties(p);
+		return treeGeoRepository.save(result);
 	}
-*/
+
 
 
 }

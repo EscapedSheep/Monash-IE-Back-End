@@ -11,5 +11,5 @@ public interface MapService {
 
 	List<GeoTree> findByCoordinates(double lon, double lat, int limit);
 
-	//GeoTree save(double lon, double lat, String name, Object genus, Object family, Object diameter_breast_height, Object year_planted, Object date_planted, Object fulladdress, Object suburb);
+	GeoTree save(String species, double lon, double lat, String scientific, String common, String source, String height);
 }

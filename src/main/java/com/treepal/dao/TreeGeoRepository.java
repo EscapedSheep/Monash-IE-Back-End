@@ -11,5 +11,5 @@ public interface TreeGeoRepository{
 	
 	List<GeoTree> findByCoordinates(double lon, double lat, int limit);
 	
-	//GeoTree save(GeoTree geoTree);
+	GeoTree save(GeoTree geoTree);
 }
