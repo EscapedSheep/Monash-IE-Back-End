@@ -89,22 +89,22 @@ body
 
 .funA {
 	position: absolute;
-	right: 100px;
+	right: 80px;
 	top: 200px;
-	width: 40%;
-	height: 50%;
+	width: 25%;
+	height: 65%;
 	background-color: rgba(241,196,15,1);
 }
 .tipLine {
 	position: absolute;
-	left: 20%;
+	left: 10%;
 	top: 5%;
 	color: #FFF;
 }
 
 .ans {
 	position: absolute;
-	left: 20%;
+	left: 15%;
 	outline-style: none;
 	border-radius: 3px;
 	width: 300px;
@@ -116,7 +116,7 @@ body
 
 .forId {
 	position: absolute;
-	left: 20%;
+	left: 10%;
 	top: 5%;
 	font-size: 16px;
 }
@@ -127,7 +127,7 @@ body
 
 .forName {
 	position: absolute;
-	left: 20%;
+	left: 10%;
 	top: 35%;
 	font-size: 16px;
 }
@@ -142,7 +142,7 @@ body
 
 .tipLine2 {
 	position: absolute;
-	left: 20%;
+	left: 10%;
 	top: 15%;
 	color: #FFF;
 }
@@ -162,25 +162,25 @@ body
 #registBtn {
 	position: absolute;
 	left: 50%;
-	top: 60%;
+	top: 80%;
 }
 
 #yesBtn {
 	position: absolute;
 	left: 50%;
-	top: 30%
+	top: 40%
 }
 
 #noBtn {
 	position: absolute;
 	left: 50%;
-	top: 60%;
+	top: 80%;
 }
 
 #loginBtn {
 	position: absolute;
 	left: 50%;
-	top: 60%;
+	top: 80%;
 }
 
 .btn p:last-child {
