@@ -30,4 +30,10 @@ public class TreeGeoRepositoryImpl implements TreeGeoRepository {
 		query.limit(limit);
 		return mongoTemplate.find(query, GeoTree.class);
 	}
+/*
+	@Override
+	public GeoTree save(GeoTree geoTree) {
+		return mongoTemplate.save(geoTree);
+	}
+	*/
 }

@@ -1,76 +1,90 @@
 package com.treepal.domain;
 
 public class Properties {
-	private int cartodb_id;
+	private Object cartodb_id;
 	
-	private int com_id;
+	private Object gid;
 	
-	private Object common_name;
-	
-	private Object scientific_name;
+	private Object tree_type;
 	
 	private Object genus;
 	
-	private Object family;
+	private Object species;
 	
-	private Object diameter_breast_height;
+	private Object scientific;
 	
-	private Object year_planted;
+	private Object variety;
 	
-	private Object date_planted;
+	private Object description;
 	
-	private Object age_description;
+	private Object common;
 	
-	private Object useful_life_expectency;
+	private Object height;
 	
-	private Object useful_life_expectency_value;
+	private Object crown;
 	
-	private Object precinct;
+	private Object dbh;
 	
-	private Object located_in;
+	private Object health;
 	
-	private Object uploaddate;
+	private Object structure;
 	
-	private Object coordinatelocation;
+	private Object captured;
 	
-	private Object latitude;
+	private Object planted;
 	
-	private Object longitude;
+	private Object ule_min;
 	
-	private Object easting;
+	private Object ule_max;
 	
-	private Object northing;
+	private Object ref;
 	
-	private Object fulladdress;
+	private Object location;
 	
-	private Object suburb;
+	private Object maturity;
+	
+	private Object lat;
+	
+	private Object lon;
+	
+	private Object source;
+	
+	private Object surveytype;
+	
+	private Object address;
+	
+	private Object dbh_cm_min;
+	
+	private Object dbh_cm_max;
+	
+	private Object species_count;
 	
 	public Properties() {
 		
 	}
 
-	public int getCartodb_id() {
+	public Object getCartodb_id() {
 		return cartodb_id;
 	}
 
-	public void setCartodb_id(int cartodb_id) {
+	public void setCartodb_id(Object cartodb_id) {
 		this.cartodb_id = cartodb_id;
 	}
 
-	public Object getCommon_name() {
-		return common_name;
+	public Object getGid() {
+		return gid;
 	}
 
-	public void setCommon_name(Object common_name) {
-		this.common_name = common_name;
+	public void setGid(Object gid) {
+		this.gid = gid;
 	}
 
-	public Object getScientific_name() {
-		return scientific_name;
+	public Object getTree_type() {
+		return tree_type;
 	}
 
-	public void setScientific_name(Object scientific_name) {
-		this.scientific_name = scientific_name;
+	public void setTree_type(Object tree_type) {
+		this.tree_type = tree_type;
 	}
 
 	public Object getGenus() {
@@ -81,154 +95,205 @@ public class Properties {
 		this.genus = genus;
 	}
 
-	public Object getFamily() {
-		return family;
+	public Object getSpecies() {
+		return species;
 	}
 
-	public void setFamily(Object family) {
-		this.family = family;
+	public void setSpecies(Object species) {
+		this.species = species;
 	}
 
-	public Object getDiameter_breast_height() {
-		return diameter_breast_height;
+	public Object getScientific() {
+		return scientific;
 	}
 
-	public void setDiameter_breast_height(Object diameter_breast_height) {
-		this.diameter_breast_height = diameter_breast_height;
+	public void setScientific(Object scientific) {
+		this.scientific = scientific;
 	}
 
-	public Object getYear_planted() {
-		return year_planted;
+	public Object getVariety() {
+		return variety;
 	}
 
-	public void setYear_planted(Object year_planted) {
-		this.year_planted = year_planted;
+	public void setVariety(Object variety) {
+		this.variety = variety;
 	}
 
-	public Object getDate_planted() {
-		return date_planted;
+	public Object getDescription() {
+		return description;
 	}
 
-	public void setDate_planted(Object date_planted) {
-		this.date_planted = date_planted;
+	public void setDescription(Object description) {
+		this.description = description;
 	}
 
-	public Object getAge_description() {
-		return age_description;
+	public Object getCommon() {
+		return common;
 	}
 
-	public void setAge_description(Object age_description) {
-		this.age_description = age_description;
+	public void setCommon(Object common) {
+		this.common = common;
 	}
 
-	public Object getUseful_life_expectency() {
-		return useful_life_expectency;
+	public Object getHeight() {
+		return height;
 	}
 
-	public void setUseful_life_expectency(Object useful_life_expectency) {
-		this.useful_life_expectency = useful_life_expectency;
+	public void setHeight(Object height) {
+		this.height = height;
 	}
 
-	public Object getUseful_life_expectency_value() {
-		return useful_life_expectency_value;
+	public Object getCrown() {
+		return crown;
 	}
 
-	public void setUseful_life_expectency_value(Object useful_life_expectency_value) {
-		this.useful_life_expectency_value = useful_life_expectency_value;
+	public void setCrown(Object crown) {
+		this.crown = crown;
 	}
 
-	public Object getPrecinct() {
-		return precinct;
+	public Object getDbh() {
+		return dbh;
 	}
 
-	public void setPrecinct(Object precinct) {
-		this.precinct = precinct;
+	public void setDbh(Object dbh) {
+		this.dbh = dbh;
 	}
 
-	public Object getLocated_in() {
-		return located_in;
+	public Object getHealth() {
+		return health;
 	}
 
-	public void setLocated_in(Object located_in) {
-		this.located_in = located_in;
+	public void setHealth(Object health) {
+		this.health = health;
 	}
 
-	public Object getUploaddate() {
-		return uploaddate;
+	public Object getStructure() {
+		return structure;
 	}
 
-	public void setUploaddate(Object uploaddate) {
-		this.uploaddate = uploaddate;
+	public void setStructure(Object structure) {
+		this.structure = structure;
 	}
 
-	public Object getCoordinatelocation() {
-		return coordinatelocation;
+	public Object getCaptured() {
+		return captured;
 	}
 
-	public void setCoordinatelocation(Object coordinatelocation) {
-		this.coordinatelocation = coordinatelocation;
+	public void setCaptured(Object captured) {
+		this.captured = captured;
 	}
 
-	public Object getLatitude() {
-		return latitude;
+	public Object getPlanted() {
+		return planted;
 	}
 
-	public void setLatitude(Object latitude) {
-		this.latitude = latitude;
+	public void setPlanted(Object planted) {
+		this.planted = planted;
 	}
 
-	public Object getLongitude() {
-		return longitude;
+	public Object getUle_min() {
+		return ule_min;
 	}
 
-	public void setLongitude(Object longitude) {
-		this.longitude = longitude;
+	public void setUle_min(Object ule_min) {
+		this.ule_min = ule_min;
 	}
 
-	public Object getEasting() {
-		return easting;
+	public Object getUle_max() {
+		return ule_max;
 	}
 
-	public void setEasting(Object easting) {
-		this.easting = easting;
+	public void setUle_max(Object ule_max) {
+		this.ule_max = ule_max;
 	}
 
-	public Object getNorthing() {
-		return northing;
+	public Object getRef() {
+		return ref;
 	}
 
-	public void setNorthing(Object northing) {
-		this.northing = northing;
+	public void setRef(Object ref) {
+		this.ref = ref;
 	}
 
-	public int getCom_id() {
-		return com_id;
+	public Object getLocation() {
+		return location;
 	}
 
-	public void setCom_id(int com_id) {
-		this.com_id = com_id;
+	public void setLocation(Object location) {
+		this.location = location;
 	}
 
-	public void setNorthing(double northing) {
-		this.northing = northing;
+	public Object getMaturity() {
+		return maturity;
 	}
 
-	public Object getFulladdress() {
-		return fulladdress;
+	public void setMaturity(Object maturity) {
+		this.maturity = maturity;
 	}
 
-	public void setFulladdress(Object fulladdress) {
-		this.fulladdress = fulladdress;
+	public Object getLat() {
+		return lat;
 	}
 
-	public Object getSuburb() {
-		return suburb;
+	public void setLat(Object lat) {
+		this.lat = lat;
 	}
 
-	public void setSuburb(Object suburb) {
-		this.suburb = suburb;
+	public Object getLon() {
+		return lon;
 	}
 
-	
+	public void setLon(Object lon) {
+		this.lon = lon;
+	}
+
+	public Object getSource() {
+		return source;
+	}
+
+	public void setSource(Object source) {
+		this.source = source;
+	}
+
+	public Object getSurveytype() {
+		return surveytype;
+	}
+
+	public void setSurveytype(Object surveytype) {
+		this.surveytype = surveytype;
+	}
+
+	public Object getAddress() {
+		return address;
+	}
+
+	public void setAddress(Object address) {
+		this.address = address;
+	}
+
+	public Object getDbh_cm_min() {
+		return dbh_cm_min;
+	}
+
+	public void setDbh_cm_min(Object dbh_cm_min) {
+		this.dbh_cm_min = dbh_cm_min;
+	}
+
+	public Object getDbh_cm_max() {
+		return dbh_cm_max;
+	}
+
+	public void setDbh_cm_max(Object dbh_cm_max) {
+		this.dbh_cm_max = dbh_cm_max;
+	}
+
+	public Object getSpecies_count() {
+		return species_count;
+	}
+
+	public void setSpecies_count(Object species_count) {
+		this.species_count = species_count;
+	}
+
 
 }

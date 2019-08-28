@@ -18,13 +18,15 @@ body
 	}
 
 #topD {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
-	height: 60px;
+	height: 80px;
 	width: 100%;
-	background-color: darkolivegreen;
-	padding: 4px 0;
+	background-color: #333;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 }
 
 #wel {
@@ -81,10 +83,10 @@ body
 
 #logo {
 	position: relative;
-	left: 20px;
-	top: 5px;
-	height: 55px;
-	width: 120px;
+	left: 5%;
+	top: 5%;
+	height: 80%;
+	width: 10%;
 }
 
 .funA {
@@ -148,7 +150,7 @@ body
 }
 .btn {
 	background-color: #3498db;
-	width: 300px;
+	width: 80%;
 	padding: 4px 0;
 	/*position: absolute;
 	left: 50%;

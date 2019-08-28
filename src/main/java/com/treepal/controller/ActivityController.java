@@ -8,12 +8,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.treepal.domain.GeoTree;
 import com.treepal.domain.RestResult;
 import com.treepal.service.MapService;
 import com.treepal.utils.ResultGenerater;
 
 @Controller
-@RequestMapping("/activity")
+@RequestMapping(value= {"/activity","/addTree"})
 public class ActivityController extends BaseController{
 
 	private final MapService mapService;
@@ -48,4 +49,16 @@ public class ActivityController extends BaseController{
 			return resultGenerater.getFailResult(e.getMessage());
 		}
 	}
+	/*
+	@RequestMapping(value="/addTreeRecord", method=RequestMethod.POST)
+	public RestResult addTreeRecord(double lon, double lat, String name, Object genus, Object family, Object height, Object year_planted, Object date_planted, Object fulladdress, Object suburb) {
+		try {
+			GeoTree result = mapService.save(lon, lat, name, genus, family, height, year_planted, date_planted, fulladdress, suburb);
+			return resultGenerater.getSuccessResult(result);
+		}
+		catch(Exception e) {
+			return resultGenerater.getFailResult(e.getMessage());
+		}
+	}
+	*/
 }
