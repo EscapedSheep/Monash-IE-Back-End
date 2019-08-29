@@ -12,4 +12,6 @@ public interface MapService {
 	List<GeoTree> findByCoordinates(double lon, double lat, int limit);
 
 	GeoTree save(String species, double lon, double lat, String scientific, String common, String source, String height);
+	
+	List<GeoTree> findMyRecord(String source);
 }

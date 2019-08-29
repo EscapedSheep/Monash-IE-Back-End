@@ -45,6 +45,11 @@ public class MapServiceImpl implements MapService {
 		return treeGeoRepository.save(result);
 	}
 
+	@Override
+	public List<GeoTree> findMyRecord(String source) {
+		return treeGeoRepository.findBySource(source);
+	}
+
 
 
 }

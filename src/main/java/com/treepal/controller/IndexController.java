@@ -37,7 +37,12 @@ public class IndexController extends BaseController{
 	}
 	
 	@RequestMapping(value="/activity")
-	public String activity() {
+	public String activity(Model model) {
+		Tree tree = super.getTree();
+		if(null != tree){
+			model.addAttribute(Const.LOGIN_SESSION_KEY,tree);
+			return "activity";
+		}
 		return "activity";
 	}
 	

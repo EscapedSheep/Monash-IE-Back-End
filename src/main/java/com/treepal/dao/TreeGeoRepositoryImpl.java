@@ -35,5 +35,11 @@ public class TreeGeoRepositoryImpl implements TreeGeoRepository {
 	public GeoTree save(GeoTree geoTree) {
 		return mongoTemplate.save(geoTree);
 	}
+
+	@Override
+	public List<GeoTree> findBySource(String source) {
+		Query query = new Query(Criteria.where("properties.source").is(source));
+		return mongoTemplate.find(query, GeoTree.class);
+	}
 	
 }

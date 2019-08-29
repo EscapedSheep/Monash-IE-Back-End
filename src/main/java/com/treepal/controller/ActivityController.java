@@ -1,5 +1,7 @@
 package com.treepal.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -50,5 +52,32 @@ public class ActivityController extends BaseController{
 		}
 	}
 
-	public RestResult addTree() {return null;};
+	@RequestMapping(value="/addNewRecord", method = RequestMethod.POST)
+	@ResponseBody
+	public RestResult addTree(@RequestBody String species, double lon, double lat, String scientific, String common, String height) {
+		try {
+			String source = String.valueOf(super.getTree().getId());
+			return resultGenerater.getSuccessResult(mapService.save(species, lon, lat, scientific, common, source, height));
+		}
+		catch(Exception e) {
+			return resultGenerater.getFailResult(e.getMessage());
+					
+		}
+		
+	}
+	
+	@RequestMapping(value="/findMyRecord", method = RequestMethod.GET)
+	@ResponseBody
+	public RestResult findMyRecord() {
+		try {
+			String source = String.valueOf(super.getTree().getId());
+			List<GeoTree> trees = mapService.findMyRecord(source);
+			if (trees.size() == 0) 
+				return resultGenerater.getFailResult("Oh, seems u did not add any record");
+			return resultGenerater.getSuccessResult(trees);
+		}
+		catch(Exception e) {
+			return resultGenerater.getFailResult(e.getMessage());
+		}
+	}
 }

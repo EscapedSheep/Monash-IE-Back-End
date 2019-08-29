@@ -1,0 +1,26 @@
+body {
+    background-color: #f1c40f;
+    height: 100%;
+}
+
+#form {
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    height: 80%;
+    width: 80%;
+    font-size: 20px;
+    font-family: "Comic Sans MS";
+
+}
+
+.ans {
+    width: 80%;
+    font-size: 20px;
+}
+
+#notice {
+    position: absolute;
+    left: 30%;
+    font-size: 30px;
+}

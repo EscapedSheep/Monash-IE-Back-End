@@ -38,10 +38,10 @@ a:hover {
 .geocoder {
         position:relative;
 /*        z-index:1;*/
-        width:55%;
+        width:100%;
         left: 0;
         margin-left:0;
-        top: 20px;
+        top: 0;
         
     }
 .mapboxgl-ctrl-geocoder { min-width:100%; }
@@ -62,7 +62,7 @@ a:hover {
   top: 0;
   left: 0;
   overflow: hidden;
-  margin-top: 70px;
+  margin-top: 40px;
   border-right: 1px solid rgba(0, 0, 0, 0.25);
 }
 
@@ -78,8 +78,8 @@ a:hover {
 
 .welcome {
   position: fixed;
-  left: 50%;
-  top: 10%;
+  left: 30%;
+  top: 5%;
   font-size: 26px;
   color: darkorange;
 }
@@ -90,6 +90,8 @@ a:hover {
   width: 80%;
   top: 17%;
   bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .heading {

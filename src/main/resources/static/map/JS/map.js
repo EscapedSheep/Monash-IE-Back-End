@@ -23,7 +23,7 @@ geocoder.on('result', function(ev) {
     var lon = ev.result.geometry.coordinates[0]
     console.log(lat,lon);
     // building url for api call to backend to get the data
-    var url = "http://treepal.herokuapp.com/activity/findByLocation?lon="+lon+"&lat="+lat+"&lim=200"      
+    var url = "/activity/findByLocation?lon="+lon+"&lat="+lat+"&lim=200"
           
     $.get(url, function(result){
         if(result.code == 200)
