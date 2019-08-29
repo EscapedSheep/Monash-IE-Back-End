@@ -62,7 +62,7 @@ public class IndexController extends BaseController{
 		return "index";
 	}
 	
-	@RequestMapping(value="/addTree",method=RequestMethod.GET)
+	@RequestMapping(value="/addTree")
 	public String addTree() {
 		return "/addTree";
 	}

@@ -17,7 +17,7 @@
         <div id="goHome">
             <p id="wel" th:text="${myTree == null ? 'Welcome': 'TreePal: ' + myTree.name + ', id: ' + myTree.id}"></p>
             <a href="/index">Back</a>
-            <p><a th:if="${myTree != null}" th:href="@{addTree}">Add new Tree record here</a></p>
+            <p><a th:if="${myTree != null}" href="/addTree">Add new Tree record here</a></p>
         </div>
         <div class="welcome">
             <p>Welcome! Search and learn more about your TreePal!</p>
