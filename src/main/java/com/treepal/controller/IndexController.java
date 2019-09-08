@@ -10,7 +10,13 @@ import javax.servlet.http.HttpServletResponse;
 import com.treepal.domain.Tree;
 import com.treepal.utils.Const;
 
-
+/**
+*  control Index page of the web
+*
+* @author  Maida Ge
+* @version 2.0
+* @date   2019-09-09
+*/
 @Controller
 @RequestMapping("/")
 public class IndexController extends BaseController{
@@ -65,5 +71,10 @@ public class IndexController extends BaseController{
 	@RequestMapping(value="/addTree")
 	public String addTree() {
 		return "addTree";
+	}
+	
+	@RequestMapping(value="/test")
+	public String test() {
+		return "test";
 	}
 }

@@ -11,7 +11,13 @@ import com.treepal.domain.Tree;
 import com.treepal.utils.Const;
 import com.treepal.utils.Des3EncryptionUtil;
 
-
+/**
+*  Base controller
+*
+* @author  Maida Ge
+* @version 2.0
+* @date   2019-09-09
+*/
 @Controller
 public class BaseController {
 	
