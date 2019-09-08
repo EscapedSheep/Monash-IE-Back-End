@@ -22,6 +22,13 @@ import com.treepal.service.TreeService;
 import com.treepal.utils.Const;
 import com.treepal.utils.ResultGenerater;
 
+/**
+* Control tree page of the web
+*
+* @author  Maida Ge
+* @version 2.0
+* @date   2019-09-09
+*/
 @Controller
 @RequestMapping("/tree")
 public class TreeController extends BaseController{

@@ -15,6 +15,13 @@ import com.treepal.domain.RestResult;
 import com.treepal.service.MapService;
 import com.treepal.utils.ResultGenerater;
 
+/**
+*  Control activity page of the web
+*
+* @author  Maida Ge
+* @version 2.0
+* @date   2019-09-09
+*/
 @Controller
 @RequestMapping(value= {"/activity","/addTree"})
 public class ActivityController extends BaseController{
