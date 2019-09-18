@@ -1,3 +1,4 @@
+/*
 package com.treepal.dao;
 
 
@@ -12,3 +13,4 @@ public interface TreeRepository extends JpaRepository<Tree, Long> {
 	Tree findByIdAndName(Long id, String name);
 
 }
+*/

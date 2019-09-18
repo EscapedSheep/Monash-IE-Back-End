@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link href="gameAssets/gameCss/gamePage.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="gameAssets/js/gamePage.js"></script>
+    <script src="https://cdn.bootcss.com/phaser/2.6.2/phaser.min.js"></script>
+    <script src="gameAssets/js/treeGame.js"></script>
+</head>
+<body>
+<div class="et-hero-tabs-container">
+    <a class="et-hero-tab" href="/index">Home</a>
+    <a class="et-hero-tab data-scroll" href="#how">How to play</a>
+    <a class="et-hero-tab data-scroll" href="#play">Play</a>
+    <a class="et-hero-tab data-scroll" href="#board">LeaderBoard</a>
+    <span class="et-hero-tab-slider"></span>
+</div>
+
+<main class="et-main">
+    <section class="et-slide" id="tab-es6">
+        <h1>Can you protect the tree?</h1>
+        <table>
+            <tr>
+                <td>
+                    <img src="gameAssets/gameImg/tree1.png" class="img">
+                </td>
+                <td>
+                    <img src="gameAssets/gameImg/tree2.png" class="img">
+                </td>
+                <td>
+                    <img src="gameAssets/gameImg/tree3.png" class="img">
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section class="et-slide" id="how">
+        <h2>Growing a tree is really simple: just need sun, water</h2>
+        <table>
+            <tr>
+                <td>
+                    <img src="gameAssets/gameImg/water.png" class="img" id="water">
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <img src="gameAssets/gameImg/sun2.png" class="img" id="sun">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="water">water</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <label for="sun">sun</label>
+                </td>
+            </tr>
+        </table>
+        <h2>Whenever tree caught water or heat, tree will produce steam which will become cloud finally.</h2>
+        <h2>The rain from cloud will grow the tree again.</h2>
+        <table>
+            <tr>
+                <td>
+                    <img src="gameAssets/gameImg/think.png" class="img" id="steam">
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <img src="gameAssets/gameImg/cloud.png" class="img" id="cloud">
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <img src="gameAssets/gameImg/raingif.gif" class="img" id="rain">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="steam">steam</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <label for="cloud">cloud</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <label for="rain">rain</label>
+                </td>
+            </tr>
+        </table>
+        <h2>However, tree is easy to get hurt as well</h2>
+        <table>
+            <tr>
+                <td>
+                    <label for="axe">Axe will kill the tree</label>
+                </td>
+                <td>
+                    <img src="gameAssets/gameImg/axe.png" class="img" id="axe">
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <label for="axe">Littered cigarette butts,fire,worm will hurt the tree</label>
+                </td>
+                <td>
+                    <img src="gameAssets/gameImg/cig.png" class="img" id="cig">
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <img src="gameAssets/gameImg/fire-0.png" class="img" id="fire">
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <img src="gameAssets/gameImg/worm.png" class="img" id="worm">
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section class="et-slide" id="play">
+        <div id="gameFrame">
+        <div id="game">
+        </div>
+        </div>
+    </section>
+    <section class="et-slide" id="board">
+        <label for="score">Your Score:</label>
+        <h3 id="score"></h3>
+        <h3><input id="name" type="text" placeholder="Your name"></h3>
+        <input type="button" onclick="addNew()" value="submit">
+        <h1> </h1>
+        <h3>LeaderBoard</h3>
+        <table class="board">
+            <tr>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+            <tr th:each="record,iterStat: ${records}">
+                <td th:text="${record.name}"></td>
+                <td th:text="${record.score}"></td>
+            </tr>
+        </table>
+    </section>
+</main>
+
+</body>
+</html>

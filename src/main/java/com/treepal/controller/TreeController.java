@@ -1,3 +1,4 @@
+/*
 package com.treepal.controller;
 
 
@@ -28,7 +29,7 @@ import com.treepal.utils.ResultGenerater;
 * @author  Maida Ge
 * @version 2.0
 * @date   2019-09-09
-*/
+*
 @Controller
 @RequestMapping("/tree")
 public class TreeController extends BaseController{
@@ -51,7 +52,7 @@ public class TreeController extends BaseController{
 		 * @Validated Tree tree
 		 * BindingResult bindingResult
 		 *  method = RequestMethod.POST
-		 *  */
+		 *  *
 		if (tree.getName().trim() == "") {
 			return resultGenerater.getFailResult("Tree name should be provided");
 		}
@@ -59,7 +60,7 @@ public class TreeController extends BaseController{
 		if (treeService.checkExist(tree.getName())) {
 			return resultGenerater.getFailResult("Tree name existed!");
 		}
-		*/
+		*
 		Tree t = treeService.saveTree(tree);
 		getSession().setAttribute(Const.LOGIN_SESSION_KEY, t);
 		model.addAttribute(Const.LOGIN_SESSION_KEY, t);
@@ -69,7 +70,7 @@ public class TreeController extends BaseController{
 	
 	/*
 	 * Tree name and id should be provided.
-	 */
+	 *
 	@RequestMapping(value="/viewMyTree", method = RequestMethod.POST)
 	@ResponseBody
 	public RestResult loginTree(Tree tree, HttpServletResponse response) {
@@ -108,3 +109,4 @@ public class TreeController extends BaseController{
         return resultGenerater.getFailResult("Tree name existed!");
     }
 }
+*/

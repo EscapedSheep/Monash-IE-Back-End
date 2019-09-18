@@ -1,3 +1,4 @@
+/*
 package com.treepal.domain;
 
 import java.io.Serializable;
@@ -103,3 +104,4 @@ public class Tree implements Serializable {
 		this.fakeId = fakeId;
 	}
 }
+*/

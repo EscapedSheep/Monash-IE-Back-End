@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import com.treepal.domain.Tree;
 import com.treepal.utils.Const;
 import com.treepal.utils.Des3EncryptionUtil;
 
@@ -28,10 +27,11 @@ public class BaseController {
     protected HttpSession getSession() {
         return getRequest().getSession();
     }
-    
+    /*
     protected Tree getTree() {
     	return (Tree)getSession().getAttribute(Const.LOGIN_SESSION_KEY);
     }
+    */
     
     protected String cookieSign(String value){
         value = value + Const.PASSWORD_KEY;

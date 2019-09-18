@@ -9,20 +9,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.treepal.dao.TreeGeoRepository;
-import com.treepal.domain.GeoTree;
+import com.treepal.domain.GameRecord;
+import com.treepal.service.GameRecordService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class GeoServiceTest {
 	
 	@Autowired
-	private TreeGeoRepository tGR;
+	private GameRecordService grs;
 	
 	@Test
 	public void find() {
-		List<GeoTree> c = tGR.findBySuburb("Parkville");
-		System.out.println(c + "迈达");
+		GameRecord gm = new GameRecord("ff",10);
+		List<GameRecord> re = grs.addNew(gm);
+		for (GameRecord r : re) {
+			System.out.print(r.getName() + "这里");
+		}
 	}
 
 }

@@ -1,3 +1,4 @@
+/*
 package com.treepal.controller;
 
 import java.util.List;
@@ -21,7 +22,7 @@ import com.treepal.utils.ResultGenerater;
 * @author  Maida Ge
 * @version 2.0
 * @date   2019-09-09
-*/
+
 @Controller
 @RequestMapping(value= {"/activity","/addTree"})
 public class ActivityController extends BaseController{
@@ -88,3 +89,4 @@ public class ActivityController extends BaseController{
 		}
 	}
 }
+*/

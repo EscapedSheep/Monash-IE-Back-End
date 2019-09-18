@@ -1,3 +1,4 @@
+/*
 package com.treepal.service;
 
 
@@ -53,3 +54,4 @@ public class MapServiceImpl implements MapService {
 
 
 }
+*/

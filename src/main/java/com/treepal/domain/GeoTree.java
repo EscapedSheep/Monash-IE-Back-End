@@ -1,3 +1,4 @@
+/*
 package com.treepal.domain;
 
 import java.io.Serializable;
@@ -56,3 +57,4 @@ public class GeoTree implements Serializable{
 	
 
 }
+*/

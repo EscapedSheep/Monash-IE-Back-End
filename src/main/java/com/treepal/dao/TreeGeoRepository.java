@@ -1,3 +1,4 @@
+/*
 package com.treepal.dao;
 
 import java.util.List;
@@ -15,3 +16,4 @@ public interface TreeGeoRepository{
 	
 	List<GeoTree> findBySource(String source);
 }
+*/

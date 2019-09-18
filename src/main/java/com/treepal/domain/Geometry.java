@@ -1,3 +1,4 @@
+/*
 package com.treepal.domain;
 
 
@@ -39,3 +40,4 @@ public class Geometry {
 	
 
 }
+*/

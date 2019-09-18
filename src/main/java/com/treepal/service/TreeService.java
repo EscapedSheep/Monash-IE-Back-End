@@ -1,3 +1,4 @@
+/*
 package com.treepal.service;
 
 import com.treepal.domain.Tree;
@@ -16,3 +17,4 @@ public interface TreeService {
 	
 	void resetTodayGrowth();
 }
+*/

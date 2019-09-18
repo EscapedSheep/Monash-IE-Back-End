@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Const {
 	
-	public static String LOGIN_SESSION_KEY = "myTree"; 
+	public static String GAME_RECORD = "records"; 
 	
 	public static String PASSWORD_KEY = "@#$%^&*()OPG#$%^&*(HG";
 	

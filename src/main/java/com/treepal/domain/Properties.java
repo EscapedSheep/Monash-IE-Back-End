@@ -1,3 +1,4 @@
+/*
 package com.treepal.domain;
 
 public class Properties {
@@ -146,3 +147,4 @@ public class Properties {
 	}
 
 }
+*/
