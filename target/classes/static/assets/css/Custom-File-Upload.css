@@ -1,0 +1,86 @@
+.user_group_label {
+  cursor: pointer;
+  margin-bottom: 0px;
+  padding: 12px;
+  border: 2px solid #d3394c;
+  color: #d3394c;
+  font-weight: bold;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#exp {
+  position: relative;
+  top: 10%;
+}
+
+#tH {
+  font-size: 5vw;
+}
+
+.s_tra {
+  height: 100vh;
+  width: 100%;
+}
+
+#tree3 {
+  position: relative;
+  left: 25%;
+  float: left;
+}
+
+#tree4 {
+  position: relative;
+  left: 70%;
+}
+
+#tree5 {
+  position: relative;
+  left: 55%;
+}
+
+.t_exp {
+  font-size: 3vw;
+}
+
+#tree6 {
+  position: relative;
+  left: 40%;
+}
+
+#tree7 {
+  position: relative;
+  left: 30%;
+}
+
+#tree8 {
+  position: relative;
+  left: 50%;
+}
+
+#tree9 {
+  position: relative;
+  left: 45%;
+}
+
+#tree10 {
+  position: relative;
+  left: 5%;
+}
+
+#btn_tra {
+  position: relative;
+  bottom: 0;
+  align-self: center;
+  border-width: 0;
+}
+
+.tree {
+  border-width: 0;
+}
+

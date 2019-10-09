@@ -1,0 +1,190 @@
+body {
+  background: linear-gradient(#e4e0ba, #f7d9aa);
+}
+
+#title {
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-size: 3vw;
+  position: relative;
+  top: 10vh;
+  font-weight: bold;
+}
+
+#top {
+}
+
+#world {
+  position: absolute;
+  top: 0;
+  height: 80vh;
+}
+
+#weAre {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+#top-bot {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 80vh;
+ 
+}
+
+#btn {
+  position: absolute;
+  bottom: 0;
+  align-self: center;
+  border-width: 0;
+}
+
+.downDiv {
+  margin-top: 0;
+  width: 100%;
+  height: 33%;
+}
+
+#weAre {
+  align-self: center;
+}
+
+.col {
+  margin-left: 2%;
+  margin-top: 2%;
+  width: auto;
+}
+
+#logo {
+  width: 62px;
+  height: 52px;
+  position: relative;
+  left: 20%;
+}
+
+.subLogo {
+  width: 10vh;
+  height: 8vh;
+  align-self: center;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.subLogo3 {
+  width: 10vh;
+  height: 8vh;
+  align-self: center;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.text-center.slogan {
+  font-size: 3vw;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.img {
+  border: hidden;
+  margin-top: 10%;
+  align-self: center;
+}
+
+.explain {
+  font-size: 1vw;
+  font-family: inherit;
+}
+
+#dark {
+}
+
+.dark {
+  color: rgb(255,255,255);
+}
+
+.navbar.navbar-light.navbar-expand-md {
+  position: fixed;
+}
+
+#subSlo {
+  font-size: 3vw;
+}
+
+#function {
+  height: 50%;
+  width: 100%;
+}
+
+#howCon {
+  height: 80%;
+}
+
+.functionCol {
+  height: 100%;
+}
+
+#subT {
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-size: 3vw;
+  position: relative;
+  top: 10vh;
+}
+
+#btnCol {
+  align-self: center;
+}
+
+#ved {
+  position: absolute;
+  top: 0;
+  width: 60%;
+  height: 60%;
+  left: 0;
+  margin-left: 20%;
+}
+
+#videoContainer {
+  position: relative;
+  padding-bottom: 50%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.placeholder {
+  width: 104px;
+  height: 10vh;
+  align-self: center;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.btnPa {
+}
+
+.clickcol:hover {
+  cursor: pointer;
+}
+
+.explain {
+  font-family: 'Fira Sans Extra Condensed';
+}
+
+#intro {
+  width: 70%;
+}
+
+#func {
+  width: 70%;
+}
+
+#video {
+  width: 100%;
+}
+
+#test45:hover{
+   background-color: #000;
+  opacity: 0.8;
+  color: #fff;   
+}
+
+
