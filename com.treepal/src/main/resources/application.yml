@@ -1,0 +1,25 @@
+Spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://ba8f324e9cd582:899cdd20@us-cdbr-iron-east-02.cleardb.net/heroku_d45fe24d38ece06?reconnect=true
+    username: ba8f324e9cd582
+    password: 899cdd20
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+  data:
+    mongodb:
+      uri: mongodb://mark:123456mark@ds151805.mlab.com:51805/heroku_1sqz91f0
+  servlet:
+    multipart:
+        max-file-size: 100MB
+        max-request-size: 100MB
+
+Server:
+  compression:
+    enabled: true
+    mime-types: application/json

@@ -1,0 +1,158 @@
+.user_group_label {
+  cursor: pointer;
+  margin-bottom: 0px;
+  padding: 12px;
+  border: 2px solid #d3394c;
+  color: #d3394c;
+  font-weight: bold;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#exp {
+  position: relative;
+  top: 10%;
+}
+
+#tH {
+  font-size: 5vw;
+}
+
+.s_tra {
+  height: 100vh;
+  width: 100%;
+}
+
+#tree3 {
+  position: relative;
+  left: 25%;
+  float: left;
+}
+
+#tree4 {
+  position: relative;
+  left: 70%;
+}
+
+#tree5 {
+  position: relative;
+  left: 55%;
+}
+
+.t_exp {
+  font-size: 3vw;
+}
+
+#tree6 {
+  position: relative;
+  left: 40%;
+}
+
+#tree7 {
+  position: relative;
+  left: 30%;
+}
+
+#tree8 {
+  position: relative;
+  left: 50%;
+}
+
+#tree9 {
+  position: relative;
+  left: 45%;
+}
+
+#tree10 {
+  position: relative;
+  left: 5%;
+}
+
+#btn_tra {
+  position: relative;
+  bottom: 0;
+  align-self: center;
+  border-width: 0;
+}
+
+.tree {
+  border-width: 0;
+}
+
+#dropDown_menu {
+  display: none;
+}
+
+#drop_nav:hover #dropDown_menu {
+  display: block;
+}
+
+#toPlay {
+  width: 10%;
+  position: relative;
+  left: 70%;
+}
+
+.navBtn {
+  background-color: rgba(252,252,252,0);
+  color: rgb(255,255,255);
+  border-width:0;
+  position:absolute;
+  bottom:0;
+  font-size:1.7vw;
+}
+
+.navBtn:hover {
+  background-color: rgba(252,252,252,0);
+  color: rgb(255,255,255);
+}
+
+.help {
+  position: relative;
+  left: 90%;
+  bottom: 65%;
+  width: 10vh;
+  font-size: 4vw;
+}
+
+#help-content {
+  position: relative;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0.9;
+  width: 50%;
+  display: none;
+}
+
+.help_exp {
+  font-size: 2.5vw;
+}
+
+#demo_tree {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#helpBtn {
+  border-width: 0;
+}
+
+#navBtn2 {
+	width:30%
+	text-align:flex-end;
+	align-self:flex-end
+}
+
+#navBtn1 {
+	width:30%
+	text-align:flex-start;
+	align-self:flex-start;
+}
+

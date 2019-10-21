@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>MyTreePal-Explore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Almendra:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Da">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:300,400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:300,400,600">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Custom-File-Upload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main2.css">
+</head>
+
+<body class="d-flex flex-column justify-content-between align-items-center" id="huntB">
+    <nav class="navbar navbar-light navbar-expand-md navbar navbar-expand-lg fixed-top" id="mainNav" style="width: 100%;background-color: #e5dfb9;height: 10vh;">
+        <div class="container-fluid"><a class="navbar-brand js-scroll-trigger" href="/index"><svg preserveAspectRatio="xMidYMid meet" data-bbox="16.5 16.5 167.1 167" viewBox="16.5 16.5 167.1 167" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img" id="logo">
+    <g>
+        <path d="M85.8 96.5c-1.4-.3-2.7.6-3 1.9l-2.6 12.7-21.4-21.5c-1-1-2.6-1-3.5 0-1 1-1 2.6 0 3.5l21.6 21.8H62.6c-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5h19.2l15.7 15.8v18h-5.9c-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5h24.2c1.4 0 2.5-1.1 2.5-2.5s-1.1-2.5-2.5-2.5h-13.4v-27.1l44.1-34.1c1.1-.8 1.3-2.4.4-3.5-.8-1.1-2.4-1.3-3.5-.4l-22 17.1v-17c0-1.4-1.1-2.5-2.5-2.5s-2.5 1.1-2.5 2.5v20.9l-14 10.8V81.9L118 58.1c.8-1.2.4-2.7-.7-3.5-1.2-.8-2.7-.4-3.5.7L99.9 76.7l-18.8-26c-.8-1.1-2.4-1.4-3.5-.6-1.1.8-1.4 2.4-.6 3.5L97.5 82v46.6l-13.1-13.2 3.3-15.9c.3-1.4-.6-2.7-1.9-3z" fill="#1A9158" data-color="1"></path>
+        <path d="M100 16.5c-35.4 0-67.1 22.4-78.8 55.8-.5 1.3.2 2.7 1.5 3.2s2.7-.2 3.2-1.5c11-31.4 40.8-52.5 74.1-52.5 43.3 0 78.5 35.2 78.5 78.5 0 20.7-8.1 39.6-21.3 53.6h-19c-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5h13.9C138.2 171 120 178.5 100 178.5c-19.3 0-37.8-7.1-52.2-19.9h34.8c1.4 0 2.5-1.1 2.5-2.5s-1.1-2.5-2.5-2.5H42.7C30.9 141 23.6 125 21.9 107.9c-.1-1.4-1.4-2.4-2.7-2.2-1.4.1-2.4 1.4-2.2 2.7 2 20.5 11.6 39.4 26.9 53.4 15.4 14 35.4 21.7 56.2 21.7 46 0 83.5-37.5 83.5-83.5S146 16.5 100 16.5z" fill="#1A9158" data-color="1"></path>
+        <path d="M19 103.1c1.4 0 2.5-1.1 2.5-2.5v-.6c0-1.4-1.1-2.5-2.5-2.5s-2.5 1.1-2.5 2.5v.6c0 1.4 1.1 2.5 2.5 2.5z" fill="#1A9158" data-color="1"></path>
+        <path d="M19.2 93.8h.3c1.3 0 2.3-1 2.5-2.2.3-3 .8-6 1.5-8.9.3-1.3-.5-2.7-1.9-3-1.3-.3-2.7.5-3 1.9-.7 3.1-1.2 6.3-1.5 9.4-.3 1.5.7 2.7 2.1 2.8z" fill="#1A9158" data-color="1"></path>
+        <path d="M130.5 158.6c1.4 0 2.5-1.1 2.5-2.5s-1.1-2.5-2.5-2.5h-6c-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5h6z" fill="#1A9158" data-color="1"></path>
+    </g>
+</svg><h1 class="text-center" style="font-size: 18px;font-family: 'Baloo Da', cursive;color: #1a9158;">MyTreePal</h1></a><button data-toggle="collapse" class="navbar-toggler navbar-toggler-right"
+                data-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link active js-scroll-trigger" href="/index">Home</a></li>
+                    <li class="nav-item d-flex flex-column justify-content-center align-items-start js-scroll-trigger" role="presentation" href="/travel">
+                        <div class="nav-item dropdown" id="drop_nav" style="background-color: rgba(229,223,185,0);"><a class="dropdown-toggle active" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(0,0,0);">Learn</a>
+                            <div class="dropdown-menu" role="menu" id="dropDown_menu" style="background-color: rgba(229,223,185,0);"><a class="dropdown-item" role="presentation" href="/explore">Data Visualization</a><a class="dropdown-item" role="presentation" href="/educate">Read More</a></div>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link active js-scroll-trigger" href="/game">Play</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="d-flex flex-column justify-content-center s_tra" id="s1_tra">
+        <div class="d-flex flex-column" id="exp">
+            <h1 class="text-center" id="tH">Tree Hunt</h1>
+            <h1 class="text-center t_exp">Explore The Royal Botanic Gardens</h1>
+            <h1 class="text-center t_exp">Let The TreeHunt Begin</h1><a class="btn btn-link btn-lg text-center border-primary data-scroll" role="button" id="btn_tra" href="#main" style="color: rgba(33,37,41,0);background-color: rgba(248,249,250,0);"><i class="fa fa-chevron-down tada animated infinite" id="toDown" style="color: rgb(11,11,11);font-size: 6vw;opacity: 0.60;top: 10vh;position: relative;"></i></a></div>
+    </section>
+    <section id="s2_tra" class="s_tra">
+        <div id="main" style="background-image: url(&quot;assets/img/tree_car.png&quot;);background-size: contain;background-position: center;">
+            <div id="modal-open">
+                <div class="modal fade" role="dialog" tabindex="-1" id="modal1" aria-labelledby="exampleModalLabel" data-backdrop="false">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Species name:&nbsp;Eucalyptus cyanophylla</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                            <div class="modal-body d-flex flex-column align-items-center">
+                                <form id="form1" enctype="multipart/form-data"><input class="form-control" type="hidden" name="name" value="Eucalyptus cyanophylla Blue-leaved Mallee Myrtaceae Victoria South Australia Planted 2008">
+                                    <div style="width: 200px;"><input type="file" id="file1" class="custom-file-input" accept="image/*" name="file">
+                                        <div class="text-center"><label id="label1" class="user_group_label" for="file1"><i class="fas fa-upload"></i>&nbsp;Choose an image...</label></div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-warning closeBtn" data-dismiss="modal" style="background-color:rgb(255,139,160);" type="button">Close</button></div>
+                        </div>
+                    </div>
+                </div><button class="btn btn-warning swing animated infinite tree" id="tree1" data-toggle="modal" data-target="#modal1" type="button" style="background-color: rgba(255,193,7,0);"><svg preserveAspectRatio="xMidYMid meet" data-bbox="33.744 24.083 127 153.999" viewBox="33.744 24.083 127 153.999" height="6vh" width="6vh" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
+    <g>
+        <path id="path1" d="M51.108 51.011s2.993-12.294 19.231-22.099c16.395-9.901 31.73-2.718 42.193 4.971 8.661 6.365 17.581.695 29.208 9.238 10.843 7.969 21.449 21.232 18.506 39.768-2.942 18.536-19.193 38.335-36.65 48.806-17.457 10.47-42.186 15.294-53.705 5.919-11.52-9.376-10.972-25.629-18.226-29.229-13.025-6.463-21.692-21.543-16.288-37.225 3.87-11.234 15.731-20.149 15.731-20.149z" fill="#E38B01" data-color="1"></path>
+        <path d="M114.194 107.607a612.35 612.35 0 0 0-1.57-5.619c1.323-.736 4.483-2.969 6.887-8.476 3.117-7.138 2.75-19.586 2.75-19.586l-2.201.184s0 6.04-2.017 14.461c-1.474 6.156-4.51 9.759-6.04 11.256-1.456-5.037-2.702-9.057-3.757-12.254.739-.971 1.848-2.648 2.83-5.043 1.651-4.027 2.2-10.983 2.2-10.983l-2.2-.183s.183 2.746-.734 7.139c-.638 3.059-1.897 6.025-2.604 7.547-3.099-9.16-4.363-10.659-4.363-10.659l-3.3 1.83s1.656 6.282 3.881 14.984c-2.278-1.26-7.819-4.513-12.498-8.759-6.051-5.492-8.25-8.421-8.25-8.421l-1.651 2.013s5.867 9.885 13.75 13.729c5.04 2.458 7.824 3.267 9.183 3.532.908 3.562 1.89 7.451 2.882 11.433-2.913-.425-8.65-1.544-12.981-4.165-6.051-3.661-9.534-8.421-9.534-8.421l-1.467 3.111s5.683 6.224 12.467 8.97c4.748 1.921 9.577 2.497 12.053 2.67 2.336 9.43 4.655 19.139 6.098 26.07 3.851 18.489 6.601 44.116 6.601 44.116l11.917-1.465c.003.001-10.449-40.272-18.332-69.011z" fill="#692429" data-color="2"></path>
+    </g>
+</svg></button></div>
+            <div id="modal-open">
+                <div class="modal fade" role="dialog" tabindex="-1" id="modal2" aria-labelledby="exampleModalLabel" data-backdrop="false">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Species name: Dampiera Purpurea</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                            <div class="modal-body d-flex flex-column align-items-center">
+                                <form id="form2" enctype="multipart/form-data"><input class="form-control" type="hidden" name="name" value="Dampiera pururea Goodeniaceae Vic NSW Qld">
+                                    <div style="width: 200px;"><input type="file" id="file2" class="custom-file-input" accept="image/*" name="file">
+                                        <div class="text-center"><label id="label2" class="user_group_label" for="file2"><i class="fas fa-upload"></i>&nbsp;Choose an image...</label></div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-warning closeBtn" data-dismiss="modal" style="background-color:rgb(255,139,160);" type="button">Close</button></div>
+                        </div>
+                    </div>
+                </div><button class="btn btn-warning swing animated infinite tree" id="tree2" data-toggle="modal" data-target="#modal2" type="button" style="background-color: rgba(255,193,7,0);"><svg preserveAspectRatio="xMidYMid meet" data-bbox="33.744 24.083 127 153.999" viewBox="33.744 24.083 127 153.999" height="6vh" width="6vh" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
+    <g>
+        <path id="path2" d="M51.108 51.011s2.993-12.294 19.231-22.099c16.395-9.901 31.73-2.718 42.193 4.971 8.661 6.365 17.581.695 29.208 9.238 10.843 7.969 21.449 21.232 18.506 39.768-2.942 18.536-19.193 38.335-36.65 48.806-17.457 10.47-42.186 15.294-53.705 5.919-11.52-9.376-10.972-25.629-18.226-29.229-13.025-6.463-21.692-21.543-16.288-37.225 3.87-11.234 15.731-20.149 15.731-20.149z" fill="#E38B01" data-color="1"></path>
+        <path d="M114.194 107.607a612.35 612.35 0 0 0-1.57-5.619c1.323-.736 4.483-2.969 6.887-8.476 3.117-7.138 2.75-19.586 2.75-19.586l-2.201.184s0 6.04-2.017 14.461c-1.474 6.156-4.51 9.759-6.04 11.256-1.456-5.037-2.702-9.057-3.757-12.254.739-.971 1.848-2.648 2.83-5.043 1.651-4.027 2.2-10.983 2.2-10.983l-2.2-.183s.183 2.746-.734 7.139c-.638 3.059-1.897 6.025-2.604 7.547-3.099-9.16-4.363-10.659-4.363-10.659l-3.3 1.83s1.656 6.282 3.881 14.984c-2.278-1.26-7.819-4.513-12.498-8.759-6.051-5.492-8.25-8.421-8.25-8.421l-1.651 2.013s5.867 9.885 13.75 13.729c5.04 2.458 7.824 3.267 9.183 3.532.908 3.562 1.89 7.451 2.882 11.433-2.913-.425-8.65-1.544-12.981-4.165-6.051-3.661-9.534-8.421-9.534-8.421l-1.467 3.111s5.683 6.224 12.467 8.97c4.748 1.921 9.577 2.497 12.053 2.67 2.336 9.43 4.655 19.139 6.098 26.07 3.851 18.489 6.601 44.116 6.601 44.116l11.917-1.465c.003.001-10.449-40.272-18.332-69.011z" fill="#692429" data-color="2"></path>
+    </g>
+</svg></button></div>
+            <div id="modal-open">
+                <div class="modal fade" role="dialog" tabindex="-1" id="modal3" aria-labelledby="exampleModalLabel" data-backdrop="false">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Species name: Grevillea chrysophaea</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                            <div class="modal-body d-flex flex-column align-items-center">
+                                <form id="form3" enctype="multipart/form-data"><input class="form-control" type="hidden" name="name" value="Grevillea chrysophaea Golden Grevillea Proteaceae Victoria">
+                                    <div style="width: 200px;"><input type="file" id="file3" class="custom-file-input" accept="image/*" name="file">
+                                        <div class="text-center"><label id="label3" class="user_group_label" for="file3"><i class="fas fa-upload"></i>&nbsp;Choose an image...</label></div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-warning closeBtn" data-dismiss="modal" style="background-color:rgb(255,139,160);" type="button">Close</button></div>
+                        </div>
+                    </div>
+                </div><button class="btn btn-warning swing animated infinite tree" id="tree3" data-toggle="modal" data-target="#modal3" type="button" style="background-color: rgba(255,193,7,0);"><svg preserveAspectRatio="xMidYMid meet" data-bbox="33.744 24.083 127 153.999" viewBox="33.744 24.083 127 153.999" height="6vh" width="6vh" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
+    <g>
+        <path id="path3" d="M51.108 51.011s2.993-12.294 19.231-22.099c16.395-9.901 31.73-2.718 42.193 4.971 8.661 6.365 17.581.695 29.208 9.238 10.843 7.969 21.449 21.232 18.506 39.768-2.942 18.536-19.193 38.335-36.65 48.806-17.457 10.47-42.186 15.294-53.705 5.919-11.52-9.376-10.972-25.629-18.226-29.229-13.025-6.463-21.692-21.543-16.288-37.225 3.87-11.234 15.731-20.149 15.731-20.149z" fill="#E38B01" data-color="1"></path>
+        <path d="M114.194 107.607a612.35 612.35 0 0 0-1.57-5.619c1.323-.736 4.483-2.969 6.887-8.476 3.117-7.138 2.75-19.586 2.75-19.586l-2.201.184s0 6.04-2.017 14.461c-1.474 6.156-4.51 9.759-6.04 11.256-1.456-5.037-2.702-9.057-3.757-12.254.739-.971 1.848-2.648 2.83-5.043 1.651-4.027 2.2-10.983 2.2-10.983l-2.2-.183s.183 2.746-.734 7.139c-.638 3.059-1.897 6.025-2.604 7.547-3.099-9.16-4.363-10.659-4.363-10.659l-3.3 1.83s1.656 6.282 3.881 14.984c-2.278-1.26-7.819-4.513-12.498-8.759-6.051-5.492-8.25-8.421-8.25-8.421l-1.651 2.013s5.867 9.885 13.75 13.729c5.04 2.458 7.824 3.267 9.183 3.532.908 3.562 1.89 7.451 2.882 11.433-2.913-.425-8.65-1.544-12.981-4.165-6.051-3.661-9.534-8.421-9.534-8.421l-1.467 3.111s5.683 6.224 12.467 8.97c4.748 1.921 9.577 2.497 12.053 2.67 2.336 9.43 4.655 19.139 6.098 26.07 3.851 18.489 6.601 44.116 6.601 44.116l11.917-1.465c.003.001-10.449-40.272-18.332-69.011z" fill="#692429" data-color="2"></path>
+    </g>
+</svg></button>
+                <div class="modal fade"
+                    role="dialog" tabindex="-1" id="modal6" aria-labelledby="exampleModalLabel" data-backdrop="false">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Species name: Melicytus dentatus</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                            <div class="modal-body d-flex flex-column align-items-center">
+                                <form id="form6" enctype="multipart/form-data"><input class="form-control" type="hidden" name="name" value="Melicytus dentatus Tree Violet Violaceae Vic NSW Qld SA Tas">
+                                    <div style="width: 200px;"><input type="file" id="file6" class="custom-file-input" accept="image/*" name="file">
+                                        <div class="text-center"><label id="label6" class="user_group_label" for="file6"><i class="fas fa-upload"></i>&nbsp;Choose an image...</label></div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-warning closeBtn" data-dismiss="modal" style="background-color:rgb(255,139,160);" type="button">Close</button></div>
+                        </div>
+                    </div>
+                </div><button class="btn btn-warning swing animated infinite tree" id="tree6" data-toggle="modal" data-target="#modal6" type="button" style="background-color: rgba(255,193,7,0);"><svg preserveAspectRatio="xMidYMid meet" data-bbox="33.744 24.083 127 153.999" viewBox="33.744 24.083 127 153.999" height="6vh" width="6vh" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
+    <g>
+        <path id="path6" d="M51.108 51.011s2.993-12.294 19.231-22.099c16.395-9.901 31.73-2.718 42.193 4.971 8.661 6.365 17.581.695 29.208 9.238 10.843 7.969 21.449 21.232 18.506 39.768-2.942 18.536-19.193 38.335-36.65 48.806-17.457 10.47-42.186 15.294-53.705 5.919-11.52-9.376-10.972-25.629-18.226-29.229-13.025-6.463-21.692-21.543-16.288-37.225 3.87-11.234 15.731-20.149 15.731-20.149z" fill="#E38B01" data-color="1"></path>
+        <path d="M114.194 107.607a612.35 612.35 0 0 0-1.57-5.619c1.323-.736 4.483-2.969 6.887-8.476 3.117-7.138 2.75-19.586 2.75-19.586l-2.201.184s0 6.04-2.017 14.461c-1.474 6.156-4.51 9.759-6.04 11.256-1.456-5.037-2.702-9.057-3.757-12.254.739-.971 1.848-2.648 2.83-5.043 1.651-4.027 2.2-10.983 2.2-10.983l-2.2-.183s.183 2.746-.734 7.139c-.638 3.059-1.897 6.025-2.604 7.547-3.099-9.16-4.363-10.659-4.363-10.659l-3.3 1.83s1.656 6.282 3.881 14.984c-2.278-1.26-7.819-4.513-12.498-8.759-6.051-5.492-8.25-8.421-8.25-8.421l-1.651 2.013s5.867 9.885 13.75 13.729c5.04 2.458 7.824 3.267 9.183 3.532.908 3.562 1.89 7.451 2.882 11.433-2.913-.425-8.65-1.544-12.981-4.165-6.051-3.661-9.534-8.421-9.534-8.421l-1.467 3.111s5.683 6.224 12.467 8.97c4.748 1.921 9.577 2.497 12.053 2.67 2.336 9.43 4.655 19.139 6.098 26.07 3.851 18.489 6.601 44.116 6.601 44.116l11.917-1.465c.003.001-10.449-40.272-18.332-69.011z" fill="#692429" data-color="2"></path>
+    </g>
+</svg></button></div>
+            <div id="modal-open">
+                <div class="modal fade" role="dialog" tabindex="-1" id="modal4" aria-labelledby="exampleModalLabel" data-backdrop="false">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Species name: Livistona australis</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                            <div class="modal-body d-flex flex-column align-items-center">
+                                <form id="form4" enctype="multipart/form-data"><input class="form-control" type="hidden" name="name" value="Livistona australis Cabbage Fan Palm Arecaceae Vic NSW Qld">
+                                    <div style="width: 200px;"><input type="file" id="file4" class="custom-file-input" accept="image/*" name="file">
+                                        <div class="text-center"><label id="label4" class="user_group_label" for="file4"><i class="fas fa-upload"></i>&nbsp;Choose an image...</label></div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-warning closeBtn" data-dismiss="modal" style="background-color:rgb(255,139,160);" type="button">Close</button></div>
+                        </div>
+                    </div>
+                </div><button class="btn btn-warning swing animated infinite tree" id="tree4" data-toggle="modal" data-target="#modal4" type="button" style="background-color: rgba(255,193,7,0);"><svg preserveAspectRatio="xMidYMid meet" data-bbox="33.744 24.083 127 153.999" viewBox="33.744 24.083 127 153.999" height="6vh" width="6vh" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
+    <g>
+        <path id="path4" d="M51.108 51.011s2.993-12.294 19.231-22.099c16.395-9.901 31.73-2.718 42.193 4.971 8.661 6.365 17.581.695 29.208 9.238 10.843 7.969 21.449 21.232 18.506 39.768-2.942 18.536-19.193 38.335-36.65 48.806-17.457 10.47-42.186 15.294-53.705 5.919-11.52-9.376-10.972-25.629-18.226-29.229-13.025-6.463-21.692-21.543-16.288-37.225 3.87-11.234 15.731-20.149 15.731-20.149z" fill="#E38B01" data-color="1"></path>
+        <path d="M114.194 107.607a612.35 612.35 0 0 0-1.57-5.619c1.323-.736 4.483-2.969 6.887-8.476 3.117-7.138 2.75-19.586 2.75-19.586l-2.201.184s0 6.04-2.017 14.461c-1.474 6.156-4.51 9.759-6.04 11.256-1.456-5.037-2.702-9.057-3.757-12.254.739-.971 1.848-2.648 2.83-5.043 1.651-4.027 2.2-10.983 2.2-10.983l-2.2-.183s.183 2.746-.734 7.139c-.638 3.059-1.897 6.025-2.604 7.547-3.099-9.16-4.363-10.659-4.363-10.659l-3.3 1.83s1.656 6.282 3.881 14.984c-2.278-1.26-7.819-4.513-12.498-8.759-6.051-5.492-8.25-8.421-8.25-8.421l-1.651 2.013s5.867 9.885 13.75 13.729c5.04 2.458 7.824 3.267 9.183 3.532.908 3.562 1.89 7.451 2.882 11.433-2.913-.425-8.65-1.544-12.981-4.165-6.051-3.661-9.534-8.421-9.534-8.421l-1.467 3.111s5.683 6.224 12.467 8.97c4.748 1.921 9.577 2.497 12.053 2.67 2.336 9.43 4.655 19.139 6.098 26.07 3.851 18.489 6.601 44.116 6.601 44.116l11.917-1.465c.003.001-10.449-40.272-18.332-69.011z" fill="#692429" data-color="2"></path>
+    </g>
+</svg></button></div>
+            <div id="modal-open">
+                <div class="modal fade" role="dialog" tabindex="-1" id="modal5" aria-labelledby="exampleModalLabel" data-backdrop="false">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Species name: Tristaniopsis laurina</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                            <div class="modal-body d-flex flex-column align-items-center">
+                                <form id="form5" enctype="multipart/form-data"><input class="form-control" type="hidden" name="name" value="Tristaniopsis laurina Kanooka Myrtaceae Vic Qld NSW">
+                                    <div style="width: 200px;"><input type="file" id="file5" class="custom-file-input" accept="image/*" name="file">
+                                        <div class="text-center"><label id="label5" class="user_group_label" for="file5"><i class="fas fa-upload"></i>&nbsp;Choose an image...</label></div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-warning closeBtn" data-dismiss="modal" style="background-color:rgb(255,139,160);" type="button">Close</button></div>
+                        </div>
+                    </div>
+                </div><button class="btn btn-warning swing animated infinite tree" id="tree5" data-toggle="modal" data-target="#modal5" type="button" style="background-color: rgba(255,193,7,0);"><svg preserveAspectRatio="xMidYMid meet" data-bbox="33.744 24.083 127 153.999" viewBox="33.744 24.083 127 153.999" height="6vh" width="6vh" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
+    <g>
+        <path id="path5" d="M51.108 51.011s2.993-12.294 19.231-22.099c16.395-9.901 31.73-2.718 42.193 4.971 8.661 6.365 17.581.695 29.208 9.238 10.843 7.969 21.449 21.232 18.506 39.768-2.942 18.536-19.193 38.335-36.65 48.806-17.457 10.47-42.186 15.294-53.705 5.919-11.52-9.376-10.972-25.629-18.226-29.229-13.025-6.463-21.692-21.543-16.288-37.225 3.87-11.234 15.731-20.149 15.731-20.149z" fill="#E38B01" data-color="1"></path>
+        <path d="M114.194 107.607a612.35 612.35 0 0 0-1.57-5.619c1.323-.736 4.483-2.969 6.887-8.476 3.117-7.138 2.75-19.586 2.75-19.586l-2.201.184s0 6.04-2.017 14.461c-1.474 6.156-4.51 9.759-6.04 11.256-1.456-5.037-2.702-9.057-3.757-12.254.739-.971 1.848-2.648 2.83-5.043 1.651-4.027 2.2-10.983 2.2-10.983l-2.2-.183s.183 2.746-.734 7.139c-.638 3.059-1.897 6.025-2.604 7.547-3.099-9.16-4.363-10.659-4.363-10.659l-3.3 1.83s1.656 6.282 3.881 14.984c-2.278-1.26-7.819-4.513-12.498-8.759-6.051-5.492-8.25-8.421-8.25-8.421l-1.651 2.013s5.867 9.885 13.75 13.729c5.04 2.458 7.824 3.267 9.183 3.532.908 3.562 1.89 7.451 2.882 11.433-2.913-.425-8.65-1.544-12.981-4.165-6.051-3.661-9.534-8.421-9.534-8.421l-1.467 3.111s5.683 6.224 12.467 8.97c4.748 1.921 9.577 2.497 12.053 2.67 2.336 9.43 4.655 19.139 6.098 26.07 3.851 18.489 6.601 44.116 6.601 44.116l11.917-1.465c.003.001-10.449-40.272-18.332-69.011z" fill="#692429" data-color="2"></path>
+    </g>
+</svg></button></div>
+            <div id="modal-open">
+                <div class="modal fade" role="dialog" tabindex="-1" id="modal7" aria-labelledby="exampleModalLabel" data-backdrop="false">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Species name: Dampiera dysantha</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                            <div class="modal-body d-flex flex-column align-items-center">
+                                <form id="form7" enctype="multipart/form-data"><input class="form-control" type="hidden" name="name" value="Dampiera dysantha Shrubby Dampiera Goodeniaceae Victoria South Australia">
+                                    <div style="width: 200px;"><input type="file" id="file7" class="custom-file-input" accept="image/*" name="file">
+                                        <div class="text-center"><label id="label7" class="user_group_label" for="file7"><i class="fas fa-upload"></i>&nbsp;Choose an image...</label></div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-warning closeBtn" data-dismiss="modal" style="background-color:rgb(255,139,160);" type="button">Close</button></div>
+                        </div>
+                    </div>
+                </div><button class="btn btn-warning swing animated infinite tree" id="tree7" data-toggle="modal" data-target="#modal7" type="button" style="background-color: rgba(255,193,7,0);"><svg preserveAspectRatio="xMidYMid meet" data-bbox="33.744 24.083 127 153.999" viewBox="33.744 24.083 127 153.999" height="6vh" width="6vh" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
+    <g>
+        <path id="path7" d="M51.108 51.011s2.993-12.294 19.231-22.099c16.395-9.901 31.73-2.718 42.193 4.971 8.661 6.365 17.581.695 29.208 9.238 10.843 7.969 21.449 21.232 18.506 39.768-2.942 18.536-19.193 38.335-36.65 48.806-17.457 10.47-42.186 15.294-53.705 5.919-11.52-9.376-10.972-25.629-18.226-29.229-13.025-6.463-21.692-21.543-16.288-37.225 3.87-11.234 15.731-20.149 15.731-20.149z" fill="#E38B01" data-color="1"></path>
+        <path d="M114.194 107.607a612.35 612.35 0 0 0-1.57-5.619c1.323-.736 4.483-2.969 6.887-8.476 3.117-7.138 2.75-19.586 2.75-19.586l-2.201.184s0 6.04-2.017 14.461c-1.474 6.156-4.51 9.759-6.04 11.256-1.456-5.037-2.702-9.057-3.757-12.254.739-.971 1.848-2.648 2.83-5.043 1.651-4.027 2.2-10.983 2.2-10.983l-2.2-.183s.183 2.746-.734 7.139c-.638 3.059-1.897 6.025-2.604 7.547-3.099-9.16-4.363-10.659-4.363-10.659l-3.3 1.83s1.656 6.282 3.881 14.984c-2.278-1.26-7.819-4.513-12.498-8.759-6.051-5.492-8.25-8.421-8.25-8.421l-1.651 2.013s5.867 9.885 13.75 13.729c5.04 2.458 7.824 3.267 9.183 3.532.908 3.562 1.89 7.451 2.882 11.433-2.913-.425-8.65-1.544-12.981-4.165-6.051-3.661-9.534-8.421-9.534-8.421l-1.467 3.111s5.683 6.224 12.467 8.97c4.748 1.921 9.577 2.497 12.053 2.67 2.336 9.43 4.655 19.139 6.098 26.07 3.851 18.489 6.601 44.116 6.601 44.116l11.917-1.465c.003.001-10.449-40.272-18.332-69.011z" fill="#692429" data-color="2"></path>
+    </g>
+</svg></button>
+                <div class="modal fade"
+                    role="dialog" tabindex="-1" id="modal8" aria-labelledby="exampleModalLabel" data-backdrop="false">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Species name: Grevillea confertifolia</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                            <div class="modal-body d-flex flex-column align-items-center">
+                                <form id="form8" enctype="multipart/form-data"><input class="form-control" type="hidden" name="name" value="Grevillea confertifolia(Mt William) Proteaceae Victoria">
+                                    <div style="width: 200px;"><input type="file" id="file8" class="custom-file-input" accept="image/*" name="file">
+                                        <div class="text-center"><label id="label8" class="user_group_label" for="file8"><i class="fas fa-upload"></i>&nbsp;Choose an image...</label></div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-warning closeBtn" data-dismiss="modal" style="background-color:rgb(255,139,160);" type="button">Close</button></div>
+                        </div>
+                    </div>
+                </div><button class="btn btn-warning swing animated infinite tree" id="tree8" data-toggle="modal" data-target="#modal8" type="button" style="background-color: rgba(255,193,7,0);"><svg preserveAspectRatio="xMidYMid meet" data-bbox="33.744 24.083 127 153.999" viewBox="33.744 24.083 127 153.999" height="6vh" width="6vh" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
+    <g>
+        <path id="path8" d="M51.108 51.011s2.993-12.294 19.231-22.099c16.395-9.901 31.73-2.718 42.193 4.971 8.661 6.365 17.581.695 29.208 9.238 10.843 7.969 21.449 21.232 18.506 39.768-2.942 18.536-19.193 38.335-36.65 48.806-17.457 10.47-42.186 15.294-53.705 5.919-11.52-9.376-10.972-25.629-18.226-29.229-13.025-6.463-21.692-21.543-16.288-37.225 3.87-11.234 15.731-20.149 15.731-20.149z" fill="#E38B01" data-color="1"></path>
+        <path d="M114.194 107.607a612.35 612.35 0 0 0-1.57-5.619c1.323-.736 4.483-2.969 6.887-8.476 3.117-7.138 2.75-19.586 2.75-19.586l-2.201.184s0 6.04-2.017 14.461c-1.474 6.156-4.51 9.759-6.04 11.256-1.456-5.037-2.702-9.057-3.757-12.254.739-.971 1.848-2.648 2.83-5.043 1.651-4.027 2.2-10.983 2.2-10.983l-2.2-.183s.183 2.746-.734 7.139c-.638 3.059-1.897 6.025-2.604 7.547-3.099-9.16-4.363-10.659-4.363-10.659l-3.3 1.83s1.656 6.282 3.881 14.984c-2.278-1.26-7.819-4.513-12.498-8.759-6.051-5.492-8.25-8.421-8.25-8.421l-1.651 2.013s5.867 9.885 13.75 13.729c5.04 2.458 7.824 3.267 9.183 3.532.908 3.562 1.89 7.451 2.882 11.433-2.913-.425-8.65-1.544-12.981-4.165-6.051-3.661-9.534-8.421-9.534-8.421l-1.467 3.111s5.683 6.224 12.467 8.97c4.748 1.921 9.577 2.497 12.053 2.67 2.336 9.43 4.655 19.139 6.098 26.07 3.851 18.489 6.601 44.116 6.601 44.116l11.917-1.465c.003.001-10.449-40.272-18.332-69.011z" fill="#692429" data-color="2"></path>
+    </g>
+</svg></button></div>
+            <div id="modal-open">
+                <div class="modal fade" role="dialog" tabindex="-1" id="modal9" aria-labelledby="exampleModalLabel" data-backdrop="false">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Species name: Acacia daviesii</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                            <div class="modal-body d-flex flex-column align-items-center">
+                                <form id="form9" enctype="multipart/form-data"><input class="form-control" type="hidden" name="name" value="Acacia daviesii Mimosaceae Victoria">
+                                    <div style="width: 200px;"><input type="file" id="file9" class="custom-file-input" accept="image/*" name="file">
+                                        <div class="text-center"><label id="label9" class="user_group_label" for="file9"><i class="fas fa-upload"></i>&nbsp;Choose an image...</label></div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-warning closeBtn" data-dismiss="modal" style="background-color:rgb(255,139,160);" type="button">Close</button></div>
+                        </div>
+                    </div>
+                </div><button class="btn btn-warning swing animated infinite tree" id="tree9" data-toggle="modal" data-target="#modal9" type="button" style="background-color: rgba(255,193,7,0);"><svg preserveAspectRatio="xMidYMid meet" data-bbox="33.744 24.083 127 153.999" viewBox="33.744 24.083 127 153.999" height="6vh" width="6vh" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
+    <g>
+        <path id="path9" d="M51.108 51.011s2.993-12.294 19.231-22.099c16.395-9.901 31.73-2.718 42.193 4.971 8.661 6.365 17.581.695 29.208 9.238 10.843 7.969 21.449 21.232 18.506 39.768-2.942 18.536-19.193 38.335-36.65 48.806-17.457 10.47-42.186 15.294-53.705 5.919-11.52-9.376-10.972-25.629-18.226-29.229-13.025-6.463-21.692-21.543-16.288-37.225 3.87-11.234 15.731-20.149 15.731-20.149z" fill="#E38B01" data-color="1"></path>
+        <path d="M114.194 107.607a612.35 612.35 0 0 0-1.57-5.619c1.323-.736 4.483-2.969 6.887-8.476 3.117-7.138 2.75-19.586 2.75-19.586l-2.201.184s0 6.04-2.017 14.461c-1.474 6.156-4.51 9.759-6.04 11.256-1.456-5.037-2.702-9.057-3.757-12.254.739-.971 1.848-2.648 2.83-5.043 1.651-4.027 2.2-10.983 2.2-10.983l-2.2-.183s.183 2.746-.734 7.139c-.638 3.059-1.897 6.025-2.604 7.547-3.099-9.16-4.363-10.659-4.363-10.659l-3.3 1.83s1.656 6.282 3.881 14.984c-2.278-1.26-7.819-4.513-12.498-8.759-6.051-5.492-8.25-8.421-8.25-8.421l-1.651 2.013s5.867 9.885 13.75 13.729c5.04 2.458 7.824 3.267 9.183 3.532.908 3.562 1.89 7.451 2.882 11.433-2.913-.425-8.65-1.544-12.981-4.165-6.051-3.661-9.534-8.421-9.534-8.421l-1.467 3.111s5.683 6.224 12.467 8.97c4.748 1.921 9.577 2.497 12.053 2.67 2.336 9.43 4.655 19.139 6.098 26.07 3.851 18.489 6.601 44.116 6.601 44.116l11.917-1.465c.003.001-10.449-40.272-18.332-69.011z" fill="#692429" data-color="2"></path>
+    </g>
+</svg></button>
+                <div class="modal fade"
+                    role="dialog" tabindex="-1" id="modal10" aria-labelledby="exampleModalLabel" data-backdrop="false">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Species name: Grevillea repens</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                            <div class="modal-body d-flex flex-column align-items-center">
+                                <form id="form10" enctype="multipart/form-data"><input class="form-control" type="hidden" name="name" value="Grevillea repens Creeping Grevillea Proteaceae Victoria">
+                                    <div style="width: 200px;"><input type="file" id="file10" class="custom-file-input" accept="image/*" name="file">
+                                        <div class="text-center"><label id="label10" class="user_group_label" for="file10"><i class="fas fa-upload"></i>&nbsp;Choose an image...</label></div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-warning closeBtn" data-dismiss="modal" style="background-color:rgb(255,139,160);" type="button">Close</button></div>
+                        </div>
+                    </div>
+                </div><button class="btn btn-warning swing animated infinite tree" id="tree10" data-toggle="modal" data-target="#modal10" type="button" style="background-color: rgba(255,193,7,0);"><svg preserveAspectRatio="xMidYMid meet" data-bbox="33.744 24.083 127 153.999" viewBox="33.744 24.083 127 153.999" height="6vh" width="6vh" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
+    <g>
+        <path id="path10" d="M51.108 51.011s2.993-12.294 19.231-22.099c16.395-9.901 31.73-2.718 42.193 4.971 8.661 6.365 17.581.695 29.208 9.238 10.843 7.969 21.449 21.232 18.506 39.768-2.942 18.536-19.193 38.335-36.65 48.806-17.457 10.47-42.186 15.294-53.705 5.919-11.52-9.376-10.972-25.629-18.226-29.229-13.025-6.463-21.692-21.543-16.288-37.225 3.87-11.234 15.731-20.149 15.731-20.149z" fill="#E38B01" data-color="1"></path>
+        <path d="M114.194 107.607a612.35 612.35 0 0 0-1.57-5.619c1.323-.736 4.483-2.969 6.887-8.476 3.117-7.138 2.75-19.586 2.75-19.586l-2.201.184s0 6.04-2.017 14.461c-1.474 6.156-4.51 9.759-6.04 11.256-1.456-5.037-2.702-9.057-3.757-12.254.739-.971 1.848-2.648 2.83-5.043 1.651-4.027 2.2-10.983 2.2-10.983l-2.2-.183s.183 2.746-.734 7.139c-.638 3.059-1.897 6.025-2.604 7.547-3.099-9.16-4.363-10.659-4.363-10.659l-3.3 1.83s1.656 6.282 3.881 14.984c-2.278-1.26-7.819-4.513-12.498-8.759-6.051-5.492-8.25-8.421-8.25-8.421l-1.651 2.013s5.867 9.885 13.75 13.729c5.04 2.458 7.824 3.267 9.183 3.532.908 3.562 1.89 7.451 2.882 11.433-2.913-.425-8.65-1.544-12.981-4.165-6.051-3.661-9.534-8.421-9.534-8.421l-1.467 3.111s5.683 6.224 12.467 8.97c4.748 1.921 9.577 2.497 12.053 2.67 2.336 9.43 4.655 19.139 6.098 26.07 3.851 18.489 6.601 44.116 6.601 44.116l11.917-1.465c.003.001-10.449-40.272-18.332-69.011z" fill="#692429" data-color="2"></path>
+    </g>
+</svg></button></div>
+        </div>
+        <div class="help"><button class="btn btn-warning" id="helpBtn" type="button" style="background-color: rgba(255,193,7,0);"><svg preserveAspectRatio="xMidYMid meet" data-bbox="33.744 24.083 127 153.999" viewBox="33.744 24.083 127 153.999" height="6vh" width="6vh" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
+    <g>
+        <path d="M51.108 51.011s2.993-12.294 19.231-22.099c16.395-9.901 31.73-2.718 42.193 4.971 8.661 6.365 17.581.695 29.208 9.238 10.843 7.969 21.449 21.232 18.506 39.768-2.942 18.536-19.193 38.335-36.65 48.806-17.457 10.47-42.186 15.294-53.705 5.919-11.52-9.376-10.972-25.629-18.226-29.229-13.025-6.463-21.692-21.543-16.288-37.225 3.87-11.234 15.731-20.149 15.731-20.149z" fill="#764bf1" data-color="1"></path>
+        <path d="M114.194 107.607a612.35 612.35 0 0 0-1.57-5.619c1.323-.736 4.483-2.969 6.887-8.476 3.117-7.138 2.75-19.586 2.75-19.586l-2.201.184s0 6.04-2.017 14.461c-1.474 6.156-4.51 9.759-6.04 11.256-1.456-5.037-2.702-9.057-3.757-12.254.739-.971 1.848-2.648 2.83-5.043 1.651-4.027 2.2-10.983 2.2-10.983l-2.2-.183s.183 2.746-.734 7.139c-.638 3.059-1.897 6.025-2.604 7.547-3.099-9.16-4.363-10.659-4.363-10.659l-3.3 1.83s1.656 6.282 3.881 14.984c-2.278-1.26-7.819-4.513-12.498-8.759-6.051-5.492-8.25-8.421-8.25-8.421l-1.651 2.013s5.867 9.885 13.75 13.729c5.04 2.458 7.824 3.267 9.183 3.532.908 3.562 1.89 7.451 2.882 11.433-2.913-.425-8.65-1.544-12.981-4.165-6.051-3.661-9.534-8.421-9.534-8.421l-1.467 3.111s5.683 6.224 12.467 8.97c4.748 1.921 9.577 2.497 12.053 2.67 2.336 9.43 4.655 19.139 6.098 26.07 3.851 18.489 6.601 44.116 6.601 44.116l11.917-1.465c.003.001-10.449-40.272-18.332-69.011z" fill="#692429" data-color="2"></path>
+    </g>
+</svg>
+<p class="text-center">Hint</p></button></div>
+        <div id="help-content" style="background-color: rgba(255,255,255,0.87);">
+            <h1 class="text-center help_exp">1) Find the species in Royal Botanic Garden.</h1>
+            <h1 class="text-center help_exp">2) Take the Photo of the species name that is displayed on the board next to the species</h1><img id="demo_tree" src="assets/img/dam-tree.jpg" width="20%" height="20%">
+            <h1 class="text-center help_exp">3) Upload the image and wait for the response!</h1>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+    <script src="assets/js/controll.js"></script>
+    <script src="assets/js/edu.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script src="assets/js/plot.js"></script>
+</body>
+
+</html>
